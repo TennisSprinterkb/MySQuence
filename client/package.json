@@ -3,10 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-session": "^1.16.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.16.0",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
     "react": "^16.8.6",
     "react-background-image": "^1.2.0",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^2.1.8",
+    "sequelize": "^5.3.5"
   },
   "scripts": {
     "start": "react-scripts start",
