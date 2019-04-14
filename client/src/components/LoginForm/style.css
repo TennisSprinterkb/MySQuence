@@ -12,6 +12,10 @@
    
   }
 
+  .try:active {
+      color: #5f3a8b
+  }
+
   .btn {
       background-color: #5f3a8b;
       border: #5f3a8b;

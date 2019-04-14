@@ -6,7 +6,7 @@ import { Route, Link } from 'react-router-dom';
 // import LoginInput from "../Login"
 import LoginForm from "../LoginForm";
 import Signup from "../Signup";
-import Login from "../Login";
+import LoginInput from "../Login";
 import "./style.css";
 // import Land from "../Land"
 

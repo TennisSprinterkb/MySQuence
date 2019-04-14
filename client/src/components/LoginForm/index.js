@@ -7,8 +7,8 @@ class LoginForm extends Component {
     constructor() {
         super()
         this.state = {
-            username: '',
-            password: '',
+            // username: '',
+            // password: '',
             redirectTo: null
         }
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -59,39 +59,42 @@ class LoginForm extends Component {
             return (
                 <div className="row">
                     <form className="col s12">
-                    <div className="col s8"><h4 className="heading">Login</h4></div>
-                        <div className="row">
-                            <div className="input-field
-                            col s8">
-                                <input 
-                                placeholder="Username"
-                                type="text"
-                                id="Username"
-                                value={this.state.username}
-                                onChange={this.handleChange}>
-                                </input>
+                        <div className="col s8"><h4 className="heading">Login</h4></div>
+                            <div className="row">
+                                <div className="input-field col s8">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input 
+                                    // placeholder="Username"
+                                    type="text"
+                                    id="Username"
+                                    value={this.state.username}
+                                    onChange={this.handleChange}>
+                                    </input>
+                                    <label for="Username">Username</label>
+                                </div>
                             </div>
-                        </div>
-                        <div className="row">
-                            <div className="input-field col s8">
-                                <input 
-                                placeholder="Password" 
-                                id="Password"
-                                value={this.state.password}
-                                onChange={this.handleChange}>
-                                </input>
+                            <div className="row">
+                                <div className="input-field col s8">
+                                    <i class="material-icons prefix">lock</i>
+                                    <input 
+                                    // placeholder="Password"
+                                    type="password"
+                                    id="Password"
+                                    value={this.state.password}
+                                    onChange={this.handleChange}>
+                                    </input>
+                                    <label for="Password">Password</label>
+                                </div>
                             </div>
-                        </div>
-                        <div className="row">
-                            <button 
-                            className="btn waves-effect waves-dark text-darken-2 card-panel" 
-                            type="submit" 
-                            onClick={this.handleSubmit}
-                            name="action">Submit
-                            </button>
-                        </div>
+                            <div className="row">
+                                <button 
+                                className="btn waves-effect waves-dark text-darken-2 card-panel" 
+                                type="submit" 
+                                onClick={this.handleSubmit}
+                                name="action">Submit
+                                </button>
+                            </div>
                     </form>
-                
                 </div>
               
                 
