@@ -19,7 +19,7 @@ class Home extends React.Component {
               <Route
                   path="/"
                   render={() =>
-                    <LoginForm />}
+                    <LoginInput />}
                 />
                 <Route
                   path="/login"
