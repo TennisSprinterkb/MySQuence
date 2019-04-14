@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
+import "./style.css"
 
 class LoginForm extends Component {
     constructor() {
@@ -56,48 +57,45 @@ class LoginForm extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-                <div>
-                    <h4>Login</h4>
-                    <form className="form-horizontal">
-                        <div className="form-group">
-                            <div className="col-1 col-ml-auto">
-                                <label className="form-label" htmlFor="username">Username</label>
-                            </div>
-                            <div className="col-3 col-mr-auto">
-                                <input className="form-input"
-                                    type="text"
-                                    id="username"
-                                    name="username"
-                                    placeholder="Username"
-                                    value={this.state.username}
-                                    onChange={this.handleChange}
-                                />
+                <div className="row">
+                    <form className="col s12">
+                    <div className="col s8"><h4 className="heading">Login</h4></div>
+                        <div className="row">
+                            <div className="input-field
+                            col s8">
+                                <input 
+                                placeholder="Username"
+                                type="text"
+                                id="Username"
+                                value={this.state.username}
+                                onChange={this.handleChange}>
+                                </input>
                             </div>
                         </div>
-                        <div className="form-group">
-                            <div className="col-1 col-ml-auto">
-                                <label className="form-label" htmlFor="password">Password: </label>
-                            </div>
-                            <div className="col-3 col-mr-auto">
-                                <input className="form-input"
-                                    placeholder="password"
-                                    type="password"
-                                    name="password"
-                                    value={this.state.password}
-                                    onChange={this.handleChange}
-                                />
+                        <div className="row">
+                            <div className="input-field col s8">
+                                <input 
+                                placeholder="Password" 
+                                id="Password"
+                                value={this.state.password}
+                                onChange={this.handleChange}>
+                                </input>
                             </div>
                         </div>
-                        <div className="form-group ">
-                            <div className="col-7"></div>
-                            <button
-                                className="btn btn-primary col-1 col-mr-auto"
-                               
-                                onClick={this.handleSubmit}
-                                type="submit">Login</button>
+                        <div className="row">
+                            <button 
+                            className="btn waves-effect waves-dark text-darken-2 card-panel" 
+                            type="submit" 
+                            onClick={this.handleSubmit}
+                            name="action">Submit
+                            </button>
                         </div>
                     </form>
+                
                 </div>
+              
+                
+     
             )
         }
     }
