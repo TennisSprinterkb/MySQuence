@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
+import "./style.css"
 
 class LoginForm extends Component {
     constructor() {
         super()
         this.state = {
-            username: '',
-            password: '',
+            // username: '',
+            // password: '',
             redirectTo: null
         }
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -56,48 +57,48 @@ class LoginForm extends Component {
             return <Redirect to={{ pathname: this.state.redirectTo }} />
         } else {
             return (
-                <div>
-                    <h4>Login</h4>
-                    <form className="form-horizontal">
-                        <div className="form-group">
-                            <div className="col-1 col-ml-auto">
-                                <label className="form-label" htmlFor="username">Username</label>
-                            </div>
-                            <div className="col-3 col-mr-auto">
-                                <input className="form-input"
+                <div className="row">
+                    <form className="col s12">
+                        <div className="col s8"><h4 className="heading">Login</h4></div>
+                            <div className="row">
+                                <div className="input-field col s8">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input 
+                                    // placeholder="Username"
                                     type="text"
-                                    id="username"
-                                    name="username"
-                                    placeholder="Username"
+                                    id="Username"
                                     value={this.state.username}
-                                    onChange={this.handleChange}
-                                />
+                                    onChange={this.handleChange}>
+                                    </input>
+                                    <label for="Username">Username</label>
+                                </div>
                             </div>
-                        </div>
-                        <div className="form-group">
-                            <div className="col-1 col-ml-auto">
-                                <label className="form-label" htmlFor="password">Password: </label>
-                            </div>
-                            <div className="col-3 col-mr-auto">
-                                <input className="form-input"
-                                    placeholder="password"
+                            <div className="row">
+                                <div className="input-field col s8">
+                                    <i class="material-icons prefix">lock</i>
+                                    <input 
+                                    // placeholder="Password"
                                     type="password"
-                                    name="password"
+                                    id="Password"
                                     value={this.state.password}
-                                    onChange={this.handleChange}
-                                />
+                                    onChange={this.handleChange}>
+                                    </input>
+                                    <label for="Password">Password</label>
+                                </div>
                             </div>
-                        </div>
-                        <div className="form-group ">
-                            <div className="col-7"></div>
-                            <button
-                                className="btn btn-primary col-1 col-mr-auto"
-                               
+                            <div className="row">
+                                <button 
+                                className="btn waves-effect waves-dark text-darken-2 card-panel" 
+                                type="submit" 
                                 onClick={this.handleSubmit}
-                                type="submit">Login</button>
-                        </div>
+                                name="action">Submit
+                                </button>
+                            </div>
                     </form>
                 </div>
+              
+                
+     
             )
         }
     }

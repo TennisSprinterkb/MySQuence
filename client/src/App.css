@@ -23,6 +23,10 @@
   color: #61dafb;
 }
 
+#root {
+  min-height: 900px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
