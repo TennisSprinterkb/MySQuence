@@ -1,10 +1,13 @@
 .input-field input:valid {
     border: 1px solid #5f3a8b;
+    background-color: rgba(220, 220, 220, 0.5);
+    opacity: 50%;
     
   }
 
   .input-field input:hover {
     border: 1px solid #5f3a8b;
+    background-color: lavenderblush;
    
   }
 
