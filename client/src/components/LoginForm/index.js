@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
-import "./style.css"
+// import "./style.css"
 
 class LoginForm extends Component {
     constructor() {
@@ -58,8 +58,9 @@ class LoginForm extends Component {
         } else {
             return (
                 <div className="row">
+                    {/* <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img> */}
                     <form className="col s12">
-                        <div className="col s8"><h4 className="heading">Login</h4></div>
+                        <div className="col s8"><h6 className="heading">Login</h6></div>
                             <div className="row">
                                 <div className="input-field col s8">
                                     <i class="material-icons prefix">account_circle</i>
