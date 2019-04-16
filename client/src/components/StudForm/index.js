@@ -33,7 +33,8 @@ handleSubmit(event) {
     //request to server to add a new username/password
     axios.post('/user/', {
         username: this.state.username,
-        password: this.state.password
+        password: this.state.password, 
+        email: this.state.email
     })
         .then(response => {
             console.log(response)

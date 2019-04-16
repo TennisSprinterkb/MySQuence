@@ -33,7 +33,9 @@ handleSubmit(event) {
     //request to server to add a new username/password
     axios.post('/user/', {
         username: this.state.username,
-        password: this.state.password
+        password: this.state.password, 
+        email: this.state.email,
+        certificate: this.state.certificate
     })
         .then(response => {
             console.log(response)
@@ -105,10 +107,10 @@ render() {
                         // placeholder="Password"
                         type="text"
                         id="certificate"
-                        value={this.state.cerificate}
+                        value={this.state.certificate}
                         onChange={this.handleChange}>
                         </input>
-                        <label for="Password">Certificate Number</label>
+                        <label for="certificate">Certificate Number</label>
                     </div>
                 </div>
                 <div className="row">
