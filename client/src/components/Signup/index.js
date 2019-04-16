@@ -63,37 +63,33 @@ class Signup extends Component {
 render() {
 	return (
 		<div className="row">
-		<div className="container">
-		{/* <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img> */}
-		<form className="col s12 center-align main">
-			<div class="row">
-				<div className="col s12"><h4 className="heading center-align">Sign Up</h4></div>
-			</div>	
-			<div class="row">
-				<div className="col s12 center-align">
-					<button 
-					className="btn waves-effect waves-dark text-darken-2 card-panel" 
-					type="submit" 
-					
-					name="action">Teacher
-					</button>
-					<button 
-					className="btn waves-effect waves-dark text-darken-2 card-panel" 
-					type="submit" 
-				
-					name="action">Student
-					</button>
+				<form className="col s12 center-align main">
+					<div class="row">
+						<div className="col s12"><h4 className="heading center-align">Sign Up</h4></div>
+					</div>	
+					<div class="row">
+						<div className="col s12 center-align">
+							<button 
+							className="btn waves-effect waves-dark text-darken-2 card-panel" 
+							type="submit" 
+							
+							name="action">Teacher
+							</button>
+							<button 
+							className="btn waves-effect waves-dark text-darken-2 card-panel" 
+							type="submit" 
+						
+							name="action">Student
+							</button>
+						</div>
+						</div>
+						<studForm />
+						<instForm />
+					</form>
 				</div>
-				</div>
-				<studForm />
-				<instForm />
-			</form>
-			
-			
+								
 				
-			</div>
-	</div>
-  
+	
 
 	)
 }

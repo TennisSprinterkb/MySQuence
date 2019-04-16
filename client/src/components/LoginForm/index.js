@@ -58,11 +58,12 @@ class LoginForm extends Component {
         } else {
             return (
                 <div className="row">
-                    <div className="left-align">
-                        <form className="col s12 left-align">
-                            <div className="col s8"><h4 className="heading">Login</h4></div>
+                    <form className="col s12 center-align main">
+					    <div class="row">
+						    <div className="col s12"><h4 className="heading center-align">Login</h4></div>
+					        </div>	
                                 <div className="row">
-                                    <div className="input-field col s8">
+                                    <div className="input-field col s12">
                                         <i class="material-icons prefix">account_circle</i>
                                         <input 
                                         // placeholder="Username"
@@ -75,7 +76,7 @@ class LoginForm extends Component {
                                     </div>
                                 </div>
                                 <div className="row">
-                                    <div className="input-field col s8">
+                                    <div className="input-field col s12">
                                         <i class="material-icons prefix">lock</i>
                                         <input 
                                         // placeholder="Password"
@@ -97,7 +98,7 @@ class LoginForm extends Component {
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    
               
                 
      
