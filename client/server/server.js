@@ -11,16 +11,6 @@ const port = 3001;
 // Route requires
 const user = require('./routes/user')
 
-// //instead of this get and api we can connect our MySQL database instead
-// app.get('/api/poses', (req,res) => {
-//     const poses = [
-//         {id: 1, name: 'warrior'},
-//         {id: 2, name: 'ninja'},
-//         {id: 3, name: 'plank'}
-//     ];
-//     res.json(poses);
-// });
-
 // MIDDLEWARE
 app.use(morgan('dev'))
 app.use(
