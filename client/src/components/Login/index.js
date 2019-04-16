@@ -30,8 +30,6 @@ class LoginInput extends React.Component {
     return (
         <div>
             <div className="center-align">
-                <div clasName="image" >
-                    {/* <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img> */}
                     <div className="row">
                         <button onClick={this.Login}
                         className="btn waves-effect waves-dark text-darken-2 card-panel" 
@@ -49,7 +47,7 @@ class LoginInput extends React.Component {
                 </div>
 
             </div>
-        </div>
+        
     )
 }
 }

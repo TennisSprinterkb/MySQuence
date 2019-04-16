@@ -58,45 +58,46 @@ class LoginForm extends Component {
         } else {
             return (
                 <div className="row">
-                    {/* <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img> */}
-                    <form className="col s12">
-                        <div className="col s8"><h6 className="heading">Login</h6></div>
-                            <div className="row">
-                                <div className="input-field col s8">
-                                    <i class="material-icons prefix">account_circle</i>
-                                    <input 
-                                    // placeholder="Username"
-                                    type="text"
-                                    id="Username"
-                                    value={this.state.username}
-                                    onChange={this.handleChange}>
-                                    </input>
-                                    <label for="Username">Username</label>
+                    <div className="left-align">
+                        <form className="col s12 left-align">
+                            <div className="col s8"><h4 className="heading">Login</h4></div>
+                                <div className="row">
+                                    <div className="input-field col s8">
+                                        <i class="material-icons prefix">account_circle</i>
+                                        <input 
+                                        // placeholder="Username"
+                                        type="text"
+                                        id="Username"
+                                        value={this.state.username}
+                                        onChange={this.handleChange}>
+                                        </input>
+                                        <label for="Username">Username</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="input-field col s8">
-                                    <i class="material-icons prefix">lock</i>
-                                    <input 
-                                    // placeholder="Password"
-                                    type="password"
-                                    id="Password"
-                                    value={this.state.password}
-                                    onChange={this.handleChange}>
-                                    </input>
-                                    <label for="Password">Password</label>
+                                <div className="row">
+                                    <div className="input-field col s8">
+                                        <i class="material-icons prefix">lock</i>
+                                        <input 
+                                        // placeholder="Password"
+                                        type="password"
+                                        id="Password"
+                                        value={this.state.password}
+                                        onChange={this.handleChange}>
+                                        </input>
+                                        <label for="Password">Password</label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <button 
-                                className="btn waves-effect waves-dark text-darken-2 card-panel" 
-                                type="submit" 
-                                onClick={this.handleSubmit}
-                                name="action">Submit
-                                </button>
-                            </div>
-                    </form>
-                </div>
+                                <div className="row">
+                                    <button 
+                                    className="btn waves-effect waves-dark text-darken-2 card-panel" 
+                                    type="submit" 
+                                    onClick={this.handleSubmit}
+                                    name="action">Submit
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
               
                 
      
