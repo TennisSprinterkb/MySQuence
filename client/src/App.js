@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginForm from "../src/components/LoginForm";
 import Signup from "../src/components/Signup";
 import LoginInput from "../src/components/Login";
+import StudForm from "../src/components/StudForm";
+import InstForm from "./components/InstForm";
 
 
 
@@ -60,23 +62,33 @@ class App extends Component {
       <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img>
       <Router>
         <Switch>
-        <Route
-            exact path="/"
-            render={() =>
-              <LoginInput />}
-          />
           <Route
-            exact path="/login"
-            render={() =>
-              <LoginForm
-                updateUser={this.updateUser}
-              />}
-          />
-          <Route
-            exact path="/signup"
-            render={() =>
-              <Signup/>}
-          />  
+              exact path="/"
+              render={() =>
+                <LoginInput />}
+            />
+            <Route
+              exact path="/login"
+              render={() =>
+                <LoginForm
+                  updateUser={this.updateUser}
+                />}
+            />
+            <Route
+              exact path="/signup"
+              render={() =>
+                <Signup/>}
+            />  
+            <Route
+              exact path="/studForm"
+              render={() =>
+                <StudForm />}
+            />  
+            <Route
+              exact path="/instForm"
+              render={() =>
+                <InstForm />}
+            />  
         </Switch>
       </Router>
         </div>

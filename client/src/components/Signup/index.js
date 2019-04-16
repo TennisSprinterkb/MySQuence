@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import studForm from "../StudForm/index";
-import instForm from "../instForm"
+import {withRouter} from 'react-router-dom'
+import StudForm from "../StudForm";
+import InstForm from "../InstForm";
 import "./style.css";
 
 
 
 class Signup extends Component {
-	constructor() {
-		super()
+
+constructor(props) {
+			super(props)
+				
 		this.state = {
 			// username: '',
 			// password: '',
@@ -17,7 +20,19 @@ class Signup extends Component {
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
+		this.studForm = this.studForm.bind(this)
+		this.instForm = this.instForm.bind(this)
 	}
+	
+	
+		  studForm() {
+			this.props.history.push("/studForm")
+		  }
+	
+		  instForm() {
+			this.props.history.push("/instForm")
+		  }
+	
 	handleChange(event) {
 		this.setState({
 			[event.target.name]: event.target.value
@@ -52,12 +67,6 @@ class Signup extends Component {
 		
 	}
 
-	// componentDidMount () {
-
-	// 	document.addEventListener('DOMContentLoaded', function() {
-	// 		document.querySelectorAll('select');
-	// 	});
-	// };
 
 
 render() {
@@ -69,13 +78,13 @@ render() {
 					</div>	
 					<div class="row">
 						<div className="col s12 center-align">
-							<button 
+							<button onClick={this.instForm}
 							className="btn waves-effect waves-dark text-darken-2 card-panel" 
 							type="submit" 
 							
-							name="action">Teacher
+							name="action">Instructor
 							</button>
-							<button 
+							<button onClick={this.studForm}
 							className="btn waves-effect waves-dark text-darken-2 card-panel" 
 							type="submit" 
 						
@@ -83,16 +92,10 @@ render() {
 							</button>
 						</div>
 						</div>
-						<studForm />
-						<instForm />
 					</form>
 				</div>
-								
-				
-	
-
 	)
 }
 }
 
-export default Signup
+export default withRouter(Signup)
