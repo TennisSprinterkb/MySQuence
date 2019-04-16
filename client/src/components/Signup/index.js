@@ -1,18 +1,38 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React, { Component } from 'react';
+import axios from 'axios';
+import {withRouter} from 'react-router-dom'
+import StudForm from "../StudForm";
+import InstForm from "../InstForm";
+import "./style.css";
+
+
 
 class Signup extends Component {
-	constructor() {
-		super()
+
+constructor(props) {
+			super(props)
+				
 		this.state = {
-			username: '',
-			password: '',
+			// username: '',
+			// password: '',
 			confirmPassword: '',
 
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
+		this.studForm = this.studForm.bind(this)
+		this.instForm = this.instForm.bind(this)
 	}
+	
+	
+		  studForm() {
+			this.props.history.push("/studForm")
+		  }
+	
+		  instForm() {
+			this.props.history.push("/instForm")
+		  }
+	
 	handleChange(event) {
 		this.setState({
 			[event.target.name]: event.target.value
@@ -43,56 +63,39 @@ class Signup extends Component {
 				console.log(error)
 
 			})
+
+		
 	}
+
 
 
 render() {
 	return (
-		<div className="SignupForm">
-			<h4>Sign up</h4>
-			<form className="form-horizontal">
-				<div className="form-group">
-					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="username">Username</label>
-					</div>
-					<div className="col-3 col-mr-auto">
-						<input className="form-input"
-							type="text"
-							id="username"
-							name="username"
-							placeholder="Username"
-							value={this.state.username}
-							onChange={this.handleChange}
-						/>
-					</div>
+		<div className="row">
+				<form className="col s12 center-align main">
+					<div class="row">
+						<div className="col s12"><h4 className="heading center-align">Sign Up</h4></div>
+					</div>	
+					<div class="row">
+						<div className="col s12 center-align">
+							<button onClick={this.instForm}
+							className="btn waves-effect waves-dark text-darken-2 card-panel" 
+							type="submit" 
+							
+							name="action">Instructor
+							</button>
+							<button onClick={this.studForm}
+							className="btn waves-effect waves-dark text-darken-2 card-panel" 
+							type="submit" 
+						
+							name="action">Student
+							</button>
+						</div>
+						</div>
+					</form>
 				</div>
-				<div className="form-group">
-					<div className="col-1 col-ml-auto">
-						<label className="form-label" htmlFor="password">Password: </label>
-					</div>
-					<div className="col-3 col-mr-auto">
-						<input className="form-input"
-							placeholder="password"
-							type="password"
-							name="password"
-							value={this.state.password}
-							onChange={this.handleChange}
-						/>
-					</div>
-				</div>
-				<div className="form-group ">
-					<div className="col-7"></div>
-					<button
-						className="btn btn-primary col-1 col-mr-auto"
-						onClick={this.handleSubmit}
-						type="submit"
-					>Sign up</button>
-				</div>
-			</form>
-		</div>
-
 	)
 }
 }
 
-export default Signup
+export default withRouter(Signup)

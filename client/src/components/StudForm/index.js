@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import "./style.css";
 
-class InstForm extends Component {
+class StudForm extends Component {
 
     constructor(props) {
         super(props)
@@ -34,8 +34,7 @@ handleSubmit(event) {
     axios.post('/user/', {
         username: this.state.username,
         password: this.state.password, 
-        email: this.state.email,
-        certificate: this.state.certificate
+        email: this.state.email
     })
         .then(response => {
             console.log(response)
@@ -56,13 +55,14 @@ handleSubmit(event) {
     
 }
 
+
     
 render() {
     return(
         <div className="row">
             <form className="col s12 center-align main">
                 <div class="row">
-                    <div className="col s12"><h4 className="heading center-align">Instructor Sign-Up</h4></div>
+                    <div className="col s12"><h4 className="heading center-align">Student Sign-Up</h4></div>
                 </div>	
                     
                 <div className="row">
@@ -82,11 +82,11 @@ render() {
                         <input 
                         // placeholder="Password"
                         type="password"
-                        id="Password"
+                        id="password"
                         value={this.state.password}
                         onChange={this.handleChange}>
                         </input>
-                        <label for="Password">Password</label>
+                        <label for="password">Password</label>
                     </div>
                 </div>
                 <div className="row">
@@ -98,19 +98,7 @@ render() {
                         value={this.state.email}
                         onChange={this.handleChange}>
                         </input>
-                        <label for="Password">Email</label>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="input-field col s12">
-                        <input 
-                        // placeholder="Password"
-                        type="text"
-                        id="certificate"
-                        value={this.state.certificate}
-                        onChange={this.handleChange}>
-                        </input>
-                        <label for="certificate">Certificate Number</label>
+                        <label for="email">Email</label>
                     </div>
                 </div>
                 <div className="row">
@@ -130,4 +118,4 @@ render() {
 }
 
 }
-export default InstForm;
+export default StudForm;
