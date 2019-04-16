@@ -3,13 +3,13 @@ const app = express();
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const session = require('express-session')
-const dbConnection = require('./database') 
+const dbConnection = require('./client/server/database') 
 const SequelStore = require('sequelStore');
-const passport = require('./passport');
+const passport = require('./client/server/passport');
 const app = express()
 const port = 3001;
 // Route requires
-const user = require('./routes/user')
+const user = require('./client/server/routes/user')
 
 // MIDDLEWARE
 app.use(morgan('dev'))

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import "./style.css";
+
 
 class InstForm extends Component {
 
@@ -104,7 +104,6 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Password"
                         type="text"
                         id="certificate"
                         value={this.state.certificate}
