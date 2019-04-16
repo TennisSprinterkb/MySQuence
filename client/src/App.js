@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-// import Home from "./components/Home";
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginForm from "../src/components/LoginForm";

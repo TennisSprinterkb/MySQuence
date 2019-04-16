@@ -3,23 +3,13 @@ const app = express();
 const bodyParser = require('body-parser')
 const morgan = require('morgan')
 const session = require('express-session')
-const dbConnection = require('./database') 
+const dbConnection = require('./client/server/database') 
 const SequelStore = require('sequelStore');
-const passport = require('./passport');
+const passport = require('./client/server/passport');
 const app = express()
 const port = 3001;
 // Route requires
-const user = require('./routes/user')
-
-// //instead of this get and api we can connect our MySQL database instead
-// app.get('/api/poses', (req,res) => {
-//     const poses = [
-//         {id: 1, name: 'warrior'},
-//         {id: 2, name: 'ninja'},
-//         {id: 3, name: 'plank'}
-//     ];
-//     res.json(poses);
-// });
+const user = require('./client/server/routes/user')
 
 // MIDDLEWARE
 app.use(morgan('dev'))
