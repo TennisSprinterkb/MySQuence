@@ -8,7 +8,7 @@ import Signup from "../src/components/Signup";
 import LoginInput from "../src/components/Login";
 import StudForm from "../src/components/StudForm";
 import InstForm from "./components/InstForm";
-// import InstPage from './components/InstPage';
+
 
 
 class App extends Component {
@@ -19,39 +19,39 @@ class App extends Component {
       username: null
     }
 
-    this.getUser = this.getUser.bind(this)
-    this.componentDidMount = this.componentDidMount.bind(this)
+    // this.getUser = this.getUser.bind(this)
+    // this.componentDidMount = this.componentDidMount.bind(this)
     this.updateUser = this.updateUser.bind(this)
   }
 
-  componentDidMount() {
-    this.getUser()
-  }
+  // componentDidMount() {
+  //   this.getUser()
+  // }
 
   updateUser (userObject) {
     this.setState(userObject)
   }
 
-  getUser() {
-    axios.get('/user/').then(response => {
-      console.log('Get user response: ')
-      console.log(response.data)
-      if (response.data.user) {
-        console.log('Get User: There is a user saved in the server session: ')
+  // getUser() {
+  //   axios.get('/user/').then(response => {
+  //     console.log('Get user response: ')
+  //     console.log(response.data)
+  //     if (response.data.user) {
+  //       console.log('Get User: There is a user saved in the server session: ')
 
-        this.setState({
-          loggedIn: true,
-          username: response.data.user.username
-        })
-      } else {
-        console.log('Get user: no user');
-        this.setState({
-          loggedIn: false,
-          username: null
-        })
-      }
-    })
-  }
+  //       this.setState({
+  //         loggedIn: true,
+  //         username: response.data.user.username
+  //       })
+  //     } else {
+  //       console.log('Get user: no user');
+  //       this.setState({
+  //         loggedIn: false,
+  //         username: null
+  //       })
+  //     }
+  //   })
+  // }
 
 
   render() {
@@ -60,7 +60,7 @@ class App extends Component {
       <div class="container">
       <div className="center-align">
       <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img>
-      {/* <InstPage /> */}
+
       <Router>
         <Switch>
           <Route
@@ -80,16 +80,7 @@ class App extends Component {
               render={() =>
                 <Signup/>}
             />  
-            <Route
-              exact path="/studForm"
-              render={() =>
-                <StudForm />}
-            />  
-            <Route
-              exact path="/instForm"
-              render={() =>
-                <InstForm />}
-            />
+
         </Switch>
       </Router>
         </div>

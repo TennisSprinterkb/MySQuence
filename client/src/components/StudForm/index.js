@@ -26,31 +26,24 @@ handleChange(event) {
     })
 }
 handleSubmit(event) {
-    console.log('sign-up handleSubmit, username: ')
-    console.log(this.state.username)
+
     event.preventDefault()
+    fetch("/getData")
+    .then((response) => response.json())
+    .then((res) => {console.log(res) });
 
-    //request to server to add a new username/password
-    axios.post('/user/', {
-        username: this.state.username,
-        password: this.state.password, 
-        email: this.state.email
-    })
-        .then(response => {
-            console.log(response)
-            if (!response.data.errmsg) {
-                console.log('successful signup')
-                this.setState({ //redirect to login page
-                    redirectTo: '/login'
-                })
-            } else {
-                console.log('username already taken')
-            }
-        }).catch(error => {
-            console.log('signup error: ')
-            console.log(error)
-
-        })
+    // get data
+  fetch("/postData", {
+    method:'POST',
+    headers: {
+      'Accept':'application/json',
+      'Content-Type':'application/json'
+    },
+    body: JSON.stringify({username:this.state.username,password: this.state.password})
+  })
+  .then((response) => response.json())
+  .then((res) => {console.log(res) });
+    
 
     
 }
@@ -68,6 +61,7 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
+
                         type="text"
                         id="username"
                         value={this.state.username}
