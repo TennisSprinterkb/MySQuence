@@ -21,9 +21,7 @@ class LoginInput extends React.Component {
       Signup() {
         this.props.history.push('/signup')
       }
-    // handleClickLogin = () => {
-    //     this.context.router.push('/login');
-    //   }
+    
 
       render(){
     return (

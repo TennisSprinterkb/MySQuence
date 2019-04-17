@@ -1,0 +1,25 @@
+.btn {
+    background-color: #5f3a8b;
+    border: #5f3a8b;
+    margin-left: 170px
+}
+.btn:hover {
+    background-color: #b069ac;
+    border: #b069ac;
+}
+.btn:active {
+  background-color: #b069ac;
+  border: #b069ac; 
+}
+.btn:focus {
+  background-color: #b069ac;
+  border: #b069ac; 
+}
+.btn:visited {
+  background-color: #5f3a8b;
+  border: #5f3a8b; 
+}
+h2{
+    text-align: center;
+    color: purple
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Dropdown, DropdownMenu, DropdownToggle } from 'reactstrap';
 import './App.css';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -7,7 +8,7 @@ import Signup from "../src/components/Signup";
 import LoginInput from "../src/components/Login";
 import StudForm from "../src/components/StudForm";
 import InstForm from "./components/InstForm";
-
+// import InstPage from './components/InstPage';
 
 
 class App extends Component {
@@ -59,6 +60,7 @@ class App extends Component {
       <div class="container">
       <div className="center-align">
       <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img>
+      {/* <InstPage /> */}
       <Router>
         <Switch>
           <Route
@@ -87,7 +89,7 @@ class App extends Component {
               exact path="/instForm"
               render={() =>
                 <InstForm />}
-            />  
+            />
         </Switch>
       </Router>
         </div>
