@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
+
 import {withRouter} from 'react-router-dom'
 import './style.css'
+
 
 
 
@@ -21,9 +23,7 @@ class LoginInput extends React.Component {
       Signup() {
         this.props.history.push('/signup')
       }
-    // handleClickLogin = () => {
-    //     this.context.router.push('/login');
-    //   }
+
 
       render(){
     return (

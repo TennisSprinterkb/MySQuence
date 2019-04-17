@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import axios from 'axios'
@@ -66,7 +67,7 @@ class LoginForm extends Component {
                                     <div className="input-field col s12">
                                         <i class="material-icons prefix">account_circle</i>
                                         <input 
-                                        // placeholder="Username"
+
                                         type="text"
                                         id="Username"
                                         value={this.state.username}
@@ -74,6 +75,7 @@ class LoginForm extends Component {
                                         </input>
                                         <label for="Username">Username</label>
                                     </div>
+
                                 </div>
                                 <div className="row">
                                     <div className="input-field col s12">
@@ -96,6 +98,9 @@ class LoginForm extends Component {
                                     name="action">Submit
                                     </button>
                                 </div>
+
+                            
+
                             </form>
                         </div>
                     

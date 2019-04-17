@@ -3,7 +3,9 @@ import axios from 'axios';
 import {withRouter} from 'react-router-dom'
 import StudForm from "../StudForm";
 import InstForm from "../InstForm";
+
 import "./style.css";
+
 
 
 
@@ -21,6 +23,7 @@ constructor(props) {
 		}
 		this.handleSubmit = this.handleSubmit.bind(this)
 		this.handleChange = this.handleChange.bind(this)
+
 		this.setButton = this.setButton.bind(this);
 	}
 	
@@ -34,6 +37,7 @@ constructor(props) {
 		
 	}
 	
+
 	handleChange(event) {
 		this.setState({
 			[event.target.name]: event.target.value
@@ -42,6 +46,7 @@ constructor(props) {
 
 	handleSubmit(event) {
 		event.preventDefault()
+
 		fetch("/getData")
 		.then((response) => response.json())
 		.then((res) => {console.log(res) });
@@ -57,15 +62,18 @@ constructor(props) {
 	  })
 	  .then((response) => response.json())
 	  .then((res) => {console.log(res) });
+
 		
 	}
 	
 
 
 
+
 render() {
 	return (
 		<div className="row">
+
 		{this.state.buttonId === 1 && <InstForm />}
 		{this.state.buttonId === 2 && <StudForm />}
 		{/* {this.state.buttonId !== 1  && this.state.buttonId !== 2 && <Signup />} */}
@@ -82,6 +90,7 @@ render() {
 						<input id="stud" className={this.state.buttonId === 2? "button2 btn" : 
 						"button2 btn"} onClick={() => this.setButton(2)}  value="Student" 
 						ref="button1" type="button" />
+
 						</div>
 						</div>
 					</form>

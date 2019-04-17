@@ -26,6 +26,7 @@ handleChange(event) {
     })
 }
 handleSubmit(event) {
+
     event.preventDefault()
     fetch("/getData")
     .then((response) => response.json())
@@ -43,6 +44,7 @@ handleSubmit(event) {
   .then((response) => response.json())
   .then((res) => {console.log(res) });
     
+
     
 }
 
@@ -59,7 +61,7 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Username"
+
                         type="text"
                         id="username"
                         value={this.state.username}

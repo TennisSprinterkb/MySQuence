@@ -17,6 +17,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^2.1.8",
+    "reactstrap": "^8.0.0",
     "sequelize": "^5.3.5"
   },
   "scripts": {

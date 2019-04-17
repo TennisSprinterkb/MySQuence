@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+
 import "./style.css";
 
 class InstForm extends Component {
@@ -10,6 +11,7 @@ class InstForm extends Component {
     this.state = {
         username: '',
         password: '',
+
         confirmPassword: '',
 
     }
@@ -44,6 +46,7 @@ handleSubmit(event) {
   .then((response) => response.json())
   .then((res) => {console.log(res) });
     
+
     
 }
 
@@ -59,7 +62,7 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Username"
+
                         type="text"
                         id="username"
                         value={this.state.username}
@@ -71,7 +74,7 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Password"
+
                         type="password"
                         id="Password"
                         value={this.state.password}
@@ -83,7 +86,7 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Password"
+
                         type="email"
                         id="email"
                         value={this.state.email}
@@ -95,7 +98,7 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Password"
+
                         type="text"
                         id="certificate"
                         value={this.state.certificate}
@@ -121,4 +124,6 @@ render() {
 }
 
 }
+
 export default InstForm;
+

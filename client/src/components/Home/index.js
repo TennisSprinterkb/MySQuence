@@ -4,14 +4,14 @@ import LoginForm from "../LoginForm";
 import Signup from "../Signup";
 import LoginInput from "../Login";
 import "./style.css";
-// import Land from "../Land"
+
 
 
 class Home extends React.Component {
     render() {
         return (
-          <div class="background">
-            <div class="container">
+          <div className="background">
+            <div className="container">
               <Route
                   path="/"
                   render={() =>
