@@ -68,7 +68,6 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Username"
                         type="text"
                         id="username"
                         value={this.state.username}
@@ -80,7 +79,6 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Password"
                         type="password"
                         id="Password"
                         value={this.state.password}
@@ -92,7 +90,6 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Password"
                         type="email"
                         id="email"
                         value={this.state.email}

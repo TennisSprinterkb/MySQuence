@@ -66,7 +66,6 @@ class LoginForm extends Component {
                                     <div className="input-field col s12">
                                         <i class="material-icons prefix">account_circle</i>
                                         <input 
-                                        // placeholder="Username"
                                         type="text"
                                         id="Username"
                                         value={this.state.username}
@@ -79,7 +78,6 @@ class LoginForm extends Component {
                                     <div className="input-field col s12">
                                         <i class="material-icons prefix">lock</i>
                                         <input 
-                                        // placeholder="Password"
                                         type="password"
                                         id="Password"
                                         value={this.state.password}

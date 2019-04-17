@@ -10,8 +10,8 @@ import "./style.css";
 class Home extends React.Component {
     render() {
         return (
-          <div class="background">
-            <div class="container">
+          <div className="background">
+            <div className="container">
               <Route
                   path="/"
                   render={() =>

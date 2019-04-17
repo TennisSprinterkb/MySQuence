@@ -68,7 +68,6 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Username"
                         type="text"
                         id="username"
                         value={this.state.username}

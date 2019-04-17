@@ -30,12 +30,14 @@ app.use(
 	})
 )
 
-// Passport
-app.use(passport.initialize())
-app.use(passport.session()) // calls the deserializeUser
-
+if (process.env.NODE_ENV === "production") {
+	app.use(express.static("client/build"));
+  }
+  
 
 // Routes
-app.use('/user', user)
+app.use('/user', user);
+
+const port = process.env.port || 3001;
 
 app.listen(port, () => console.log(`Server started on port ${port}`));
