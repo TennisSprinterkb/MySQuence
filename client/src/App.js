@@ -8,6 +8,10 @@ import Signup from "../src/components/Signup";
 import LoginInput from "../src/components/Login";
 import StudForm from "../src/components/StudForm";
 import InstForm from "./components/InstForm";
+import AsanaCard from './components/AsanaCard';
+import { Button, Card, CardTitle, Divider, Dropdown, Row, Col } from 'react-materialize';
+import Mapbox from './components/Mapbox';
+
 // import InstPage from './components/InstPage';
 
 
