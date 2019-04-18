@@ -20,7 +20,6 @@
     "md5": "^2.2.1",
     "mysql": "^2.16.0",
     "passport": "^0.4.0",
-
     "sequelize": "^5.3.5"
   },
   "devDependencies": {

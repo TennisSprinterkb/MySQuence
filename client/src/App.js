@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
-import { Dropdown, DropdownMenu, DropdownToggle } from 'reactstrap';
 import './App.css';
-import axios from 'axios';
+//import axios from 'axios';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginForm from "../src/components/LoginForm";
 import Signup from "../src/components/Signup";
 import LoginInput from "../src/components/Login";
-import StudForm from "../src/components/StudForm";
-import InstForm from "./components/InstForm";
-import AsanaCard from "./components/AsanaCard";
-import Mapbox from "./components/Mapbox";
-
-
+//import StudForm from "../src/components/StudForm";
+//import InstForm from "../src/components/InstForm";
+//import AsanaCard from "../src/components/AsanaCard";
+import Mapbox from "../src/components/Mapbox";
 
 class App extends Component {
   constructor() {
@@ -88,11 +85,6 @@ class App extends Component {
                     <Mapbox />}
                 />
 
-                <Route
-                  exact path="/pose"
-                  render={() =>
-                    <AsanaCard />}
-                />
 
               </Switch>
             </Router>
