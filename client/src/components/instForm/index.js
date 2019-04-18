@@ -23,7 +23,7 @@ class InstForm extends Component {
 handleChange(event) {
     this.setState({
         [event.target.name]: event.target.value
-    })
+    },()=>console.log(this.state.usename))
 }
 
 handleSubmit(event) {
@@ -31,7 +31,7 @@ handleSubmit(event) {
     fetch("/getData")
     .then((response) => response.json())
     .then((res) => {console.log(res) });
-
+    console.log(this.state.username)
     // get data
   fetch("/postData", {
     method:'POST',
@@ -60,7 +60,7 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-
+                        name ="username"
                         type="text"
                         id="username"
                         value={this.state.username}
@@ -74,6 +74,7 @@ render() {
                         <input 
 
                         type="password"
+                        name="password"
                         id="Password"
                         value={this.state.password}
                         onChange={this.handleChange}>
@@ -86,6 +87,7 @@ render() {
                         <input 
 
                         type="email"
+                        name="email"
                         id="email"
                         value={this.state.email}
                         onChange={this.handleChange}>
@@ -98,6 +100,7 @@ render() {
                         <input 
 
                         type="text"
+                        name="certificate"
                         id="certificate"
                         value={this.state.certificate}
                         onChange={this.handleChange}>

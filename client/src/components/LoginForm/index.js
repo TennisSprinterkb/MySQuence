@@ -72,6 +72,7 @@ class LoginForm extends Component {
                                             <input 
 
                                             type="text"
+                                            name="Username"
                                             id="Username"
                                             value={this.state.username}
                                             onChange={this.handleChange}>
@@ -86,6 +87,7 @@ class LoginForm extends Component {
                                             <input 
                                             // placeholder="Password"
                                             type="password"
+                                            name="Password"
                                             id="Password"
                                             value={this.state.password}
                                             onChange={this.handleChange}>

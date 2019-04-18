@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import {withRouter} from 'react-router-dom'
 import StudForm from "../StudForm";
 import InstForm from "../InstForm";
@@ -14,14 +13,11 @@ constructor(props) {
 			super(props)
 				
 		this.state = {
-			// username: '',
-			// password: '',
-			confirmPassword: '',
+			
 			buttonId: null
 
 		}
-		this.handleSubmit = this.handleSubmit.bind(this)
-		this.handleChange = this.handleChange.bind(this)
+		
 
 		this.setButton = this.setButton.bind(this);
 	}
@@ -37,33 +33,7 @@ constructor(props) {
 	}
 	
 
-	handleChange(event) {
-		this.setState({
-			[event.target.name]: event.target.value
-		})
-	}
 
-	handleSubmit(event) {
-		event.preventDefault()
-
-		fetch("/getData")
-		.then((response) => response.json())
-		.then((res) => {console.log(res) });
-  
-		// get data
-	  fetch("/postData", {
-		method:'POST',
-		headers: {
-		  'Accept':'application/json',
-		  'Content-Type':'application/json'
-		},
-		body: JSON.stringify({username:this.state.username,password: this.state.password})
-	  })
-	  .then((response) => response.json())
-	  .then((res) => {console.log(res) });
-
-		
-	}
 	
 
 
