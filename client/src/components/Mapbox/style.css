@@ -1,3 +1,10 @@
+.mapbody {
+  background-image: url("../../assets/images/gradient.png");
+  min-height: 900px;
+}
+
+
+
 .studio:before {
     content: ' ';
     display: inline-block;

@@ -42,6 +42,7 @@ class Mapbox extends Component {
 
   render() {
     return (
+   <div className="mapbody">
       <ReactMapGL className="map"
         {...this.state.viewport}
         mapboxApiAccessToken={MAPBOX_PASS}
@@ -55,6 +56,7 @@ class Mapbox extends Component {
         />
         {yogaStudio.map(this._renderMarker)}
       </ReactMapGL>
+    </div>
     );
   }
 }

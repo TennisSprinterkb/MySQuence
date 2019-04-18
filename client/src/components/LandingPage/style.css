@@ -1,9 +1,9 @@
-.btn {
+/* .btn {
     margin: 1%;
-}
+} */
 
-body {
-    background-image: url("./assets/images/download.jpg");
+/* body {
+    background-image: url("../../assets/images/download.jpg");
     background-position: center;  
     background-repeat: no-repeat; 
     background-size: cover;
@@ -12,7 +12,7 @@ body {
   
   
   .container {
-    /* min-height: 800px; */
+    min-height: 800px;
     padding-top: 5%;
-  }
+  } */
   

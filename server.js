@@ -1,12 +1,9 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser')
-const morgan = require('morgan')
 const session = require('express-session')
 const dbConnection = require('./client/server/database') 
 const SequelStore = require('sequelStore');
-const passport = require('./client/server/passport');
-const app = express()
 const port = 3001;
 // Route requires
 const user = require('./client/server/routes/user')

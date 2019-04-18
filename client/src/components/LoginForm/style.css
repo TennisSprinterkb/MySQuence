@@ -1,6 +1,4 @@
-
-
-.input-field input:valid {
+/* .input-field input:valid {
     border: 1px solid #5f3a8b;
     background-color: rgba(220, 220, 220, 0.5);
     opacity: 50%;
@@ -49,20 +47,17 @@
     padding-top: 20%; 
   } */
 
-  body {
+  /* body {
     background-image: url("../../assets/images/download.jpg");
     background-position: center;  
     background-repeat: no-repeat; 
     background-size: cover;
     min-height: 100%;
-  } 
+  }
   
   
   .container {
-    min-height: 900px;
+    min-height: 800px;
     padding-top: 5%;
-  }
-  
-  .btn {
-    margin: 1%;
-}
+  } */
+   

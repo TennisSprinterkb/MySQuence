@@ -1,38 +1,46 @@
-import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginForm from "../LoginForm";
 import Signup from "../Signup";
-import LoginInput from "../Login";
+import LandingPage from "../LandingPage";
 import "./style.css";
 
 
 
 class Home extends React.Component {
-    render() {
-        return (
-          <div className="background">
-            <div className="container">
-              <Route
-                  path="/"
+  render() {
+    return (
+      <div>
+       
+
+            <Router>
+              <Switch>
+                <Route
+                  exact path="/"
                   render={() =>
-                    <LoginInput />}
+                    <LandingPage />}
                 />
                 <Route
-                  path="/login"
+                  exact path="/login"
                   render={() =>
                     <LoginForm
                       updateUser={this.updateUser}
                     />}
                 />
                 <Route
-                  path="/signup"
+                  exact path="/signup"
                   render={() =>
-                    <Signup/>}
-                />  
-            </div>
+                    <Signup />}
+                />
+      
+
+
+              </Switch>
+            </Router>
           </div>
-        )
-    }
+      
+    );
+  }
 }
 
 export default Home;
