@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-import { Dropdown, DropdownMenu, DropdownToggle } from 'reactstrap';
 import './App.css';
-import axios from 'axios';
+//import axios from 'axios';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import LoginForm from "../src/components/LoginForm";
 import Signup from "../src/components/Signup";
 import LoginInput from "../src/components/Login";
-import StudForm from "../src/components/StudForm";
-import InstForm from "./components/InstForm";
-
-
+//import StudForm from "../src/components/StudForm";
+//import InstForm from "../src/components/InstForm";
+//import AsanaCard from "../src/components/AsanaCard";
+import Mapbox from "../src/components/Mapbox";
 
 class App extends Component {
   constructor() {
@@ -28,7 +27,7 @@ class App extends Component {
   //   this.getUser()
   // }
 
-  updateUser (userObject) {
+  updateUser(userObject) {
     this.setState(userObject)
   }
 
@@ -57,35 +56,41 @@ class App extends Component {
   render() {
     return (
       <div class="background">
-      <div class="container">
-      <div className="center-align">
-      <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img>
+        <div class="container">
+          <div className="center-align">
+            <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img>
 
-      <Router>
-        <Switch>
-          <Route
-              exact path="/"
-              render={() =>
-                <LoginInput />}
-            />
-            <Route
-              exact path="/login"
-              render={() =>
-                <LoginForm
-                  updateUser={this.updateUser}
-                />}
-            />
-            <Route
-              exact path="/signup"
-              render={() =>
-                <Signup/>}
-            />  
+            <Router>
+              <Switch>
+                <Route
+                  exact path="/"
+                  render={() =>
+                    <LoginInput />}
+                />
+                <Route
+                  exact path="/login"
+                  render={() =>
+                    <LoginForm
+                      updateUser={this.updateUser}
+                    />}
+                />
+                <Route
+                  exact path="/signup"
+                  render={() =>
+                    <Signup />}
+                />
+                <Route
+                  exact path="/map"
+                  render={() =>
+                    <Mapbox />}
+                />
 
-        </Switch>
-      </Router>
+
+              </Switch>
+            </Router>
+          </div>
         </div>
       </div>
-    </div>
     );
   }
 }
