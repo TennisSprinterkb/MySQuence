@@ -55,10 +55,10 @@ class App extends Component {
 
   render() {
     return (
-      <div class="background">
-        <div class="container">
+      <div>
+        {/* <div class="container">
           <div className="center-align">
-            <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img>
+            <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img> */}
 
             <Router>
               <Switch>
@@ -88,8 +88,7 @@ class App extends Component {
 
               </Switch>
             </Router>
-          </div>
-        </div>
+         
       </div>
     );
   }

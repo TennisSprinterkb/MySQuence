@@ -46,3 +46,18 @@
   /* form.main {
     padding-top: 20%; 
   } */
+
+  body {
+    background-image: url("./assets/images/download.jpg");
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-size: cover;
+    min-height: 100%;
+  }
+  
+  
+  .container {
+    /* min-height: 800px; */
+    padding-top: 5%;
+  }
+  
