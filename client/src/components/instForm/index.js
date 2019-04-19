@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import axios from 'axios';
+import React, {Component} from './node_modules/react';
+import axios from './node_modules/axios';
 
 class InstForm extends Component {
 
@@ -15,11 +15,8 @@ class InstForm extends Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
+    }
     
-}
-
-
-
 handleChange(event) {
     this.setState({
         [event.target.name]: event.target.value

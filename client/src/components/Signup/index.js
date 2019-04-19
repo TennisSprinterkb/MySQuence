@@ -4,41 +4,26 @@ import StudForm from "../StudForm";
 import InstForm from "../InstForm";
 import "./style.css";
 
-
-
-
 class Signup extends Component {
 
 constructor(props) {
 			super(props)
 				
-		this.state = {
-			
+		this.state = {			
 			buttonId: null
-
 		}
-		
 
 		this.setButton = this.setButton.bind(this);
 	}
-	
 	
 	setButton(id) {
 		this.setState({buttonId: id});
 		document.getElementById('header').style.display = 'none';
 		document.getElementById('stud').style.display = 'none';
 		document.getElementById('inst').style.display = 'none';
-		
-		
+			
 	}
 	
-
-
-	
-
-
-
-
 render() {
 	return (
 	<div class="container">

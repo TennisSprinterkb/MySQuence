@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": null,
+      "password": "MySQLP@ssw0rd",
       "database": "MySQuence",
       "host": "127.0.0.1",
       "port": 3306,
