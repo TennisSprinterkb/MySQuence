@@ -2,7 +2,7 @@ import React from 'react';
 
 import {withRouter} from 'react-router-dom'
 import './style.css'
-import InstPage from '../InstPage';
+// import InstPage from '../InstPage';
 
 
 
@@ -28,6 +28,7 @@ class LandingPage extends React.Component {
 
       render(){
     return (
+      // <InstPage />
         <div class="container">
           <div className="center-align">
               <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img>
