@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactMapGL, { Marker, GeolocateControl } from 'react-map-gl';
 import './style.css';
 import yogaStudio from '../../yoga-studio.json';
+import Nav from "../Nav/index"
 
 const MAPBOX_PASS = `${process.env.REACT_APP_MAPBOX_PASS}`;
 
@@ -42,21 +43,24 @@ class Mapbox extends Component {
 
   render() {
     return (
-   <div className="mapbody">
-      <ReactMapGL className="map"
-        {...this.state.viewport}
-        mapboxApiAccessToken={MAPBOX_PASS}
-        onViewportChange={(viewport) => this.setState({ viewport })}
-      >
-        <GeolocateControl
-          positionOptions={{ enableHighAccuracy: true }}
-          trackUserLocation={true}
-          fitBoundsOptions={{maxZoom : 12}}
-          onViewportChange={this._onViewportChange}
-        />
-        {yogaStudio.map(this._renderMarker)}
-      </ReactMapGL>
-    </div>
+      <div>
+        <Nav />
+        <div className="mapbody">
+          <ReactMapGL className="map"
+            {...this.state.viewport}
+            mapboxApiAccessToken={MAPBOX_PASS}
+            onViewportChange={(viewport) => this.setState({ viewport })}
+          >
+            <GeolocateControl
+              positionOptions={{ enableHighAccuracy: true }}
+              trackUserLocation={true}
+              fitBoundsOptions={{ maxZoom: 12 }}
+              onViewportChange={this._onViewportChange}
+            />
+            {yogaStudio.map(this._renderMarker)}
+          </ReactMapGL>
+        </div>
+      </div>
     );
   }
 }

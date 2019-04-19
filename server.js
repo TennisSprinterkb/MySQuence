@@ -14,28 +14,28 @@ app.get("/getData", (req, res) => {//must have the /routeName to work with React
     res.json({testData:'testData'})
 });
 
-// app.post("/postData", (req, res) => {//must have the /routeName to work with React front end.
-//     console.log("Data from front end", req.body);
-// 	let username = req.body.username;
-// 	let password = md5(req.body.password);
-// 	console.log(password)
-// 	res.json({responseData:'responseTestData'})
-// });
+app.post("/postData", (req, res) => {//must have the /routeName to work with React front end.
+	let username = req.body.username;
+	let password = md5(req.body.password);
+	res.json({responseData:'responseTestData'})
+});
 
-// app.post("/postLogin", (req, res) => {//must have the /routeName to work with React front end.
-// 	console.log('Works!')
-//     console.log("Data from front end", req.body);
-// 	let username = req.body.username;
-// 	let password = md5(req.body.password);
-// 	console.log(password)
-// 	res.json({responseData:'responseTestData'})
-// });
+app.post("/postLogin", (req, res) => {//must have the /routeName to work with React front end.
+	let username = req.body.username;
+	let password = md5(req.body.password);
+	res.json({ responseData: 'responseTestData' })
+});
+
+
 app.use(bodyParser.urlencoded({ extended: true }));
 // parse application/json
+
 
 if (process.env.NODE_ENV === "production") {
 	app.use(express.static("client/build"));
 }
+
+
 app.use(user);
 app.use(sequence);
 
