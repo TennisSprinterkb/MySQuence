@@ -2,6 +2,7 @@ import React from 'react';
 
 import {withRouter} from 'react-router-dom'
 import './style.css'
+import InstPage from '../InstPage';
 
 
 
@@ -33,15 +34,11 @@ class LandingPage extends React.Component {
                     <div className="row">
                         <button onClick={this.Login}
                         className="btn waves-effect waves-dark text-darken-2 card-panel" 
-                        type="submit" 
-                       
-                        name="action">Login
+                        type="submit" name="action">Login
                         </button>
                         <button onClick={this.Signup}
                         className="btn waves-effect waves-dark text-darken-2 card-panel" 
-                        type="submit" 
-                 
-                        name="action">Sign Up
+                        type="submit" name="action">Sign Up
                         </button>
                     </div>
                 </div>
