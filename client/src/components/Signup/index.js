@@ -12,16 +12,13 @@ constructor(props) {
 		this.state = {			
 			buttonId: null
 		}
-
 		this.setButton = this.setButton.bind(this);
-	}
-	
+	}	
 	setButton(id) {
 		this.setState({buttonId: id});
 		document.getElementById('header').style.display = 'none';
 		document.getElementById('stud').style.display = 'none';
 		document.getElementById('inst').style.display = 'none';
-			
 	}
 	
 render() {

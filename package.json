@@ -15,6 +15,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^3.9.3",
     "concurrently": "^4.1.0",
     "express": "^4.16.4",
     "express-session": "^1.16.1",

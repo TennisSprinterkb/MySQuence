@@ -7,6 +7,7 @@ import Home from "../src/components/Home";
 // import LoginInput from "../src/components/Login";
 //import AsanaCard from "../src/components/AsanaCard";
 import Mapbox from "../src/components/Mapbox";
+import Nav from "./components/Nav";
 
 class App extends Component {
   constructor() {
