@@ -8,8 +8,8 @@ class StudForm extends Component {
         super(props)
             
     this.state = {
-        // username: '',
-        // password: '',
+        username: '',
+        password: '',
         confirmPassword: '',
 
     }
@@ -61,7 +61,7 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-
+                        name="username"
                         type="text"
                         id="username"
                         value={this.state.username}
@@ -73,7 +73,8 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Password"
+                    
+                        name="password"
                         type="password"
                         id="password"
                         value={this.state.password}
@@ -85,7 +86,7 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                        // placeholder="Password"
+                        name="email"
                         type="email"
                         id="email"
                         value={this.state.email}

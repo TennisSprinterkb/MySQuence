@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -37,9 +37,9 @@ body {
 
 
 .container {
-  /* min-height: 800px; */
+  min-height: 800px;
   padding-top: 5%;
-}
+} */
 
 @keyframes App-logo-spin {
   from {
@@ -48,4 +48,8 @@ body {
   to {
     transform: rotate(360deg);
   }
+}
+
+#root {
+  min-height: 900px;
 }
