@@ -1,5 +1,5 @@
-import React, {Component} from './node_modules/react';
-import axios from './node_modules/axios';
+import React, {Component} from 'react';
+import axios from 'axios';
 
 class InstForm extends Component {
 
@@ -26,17 +26,23 @@ handleChange(event) {
 handleSubmit(event) {
     event.preventDefault()
     fetch("/getData")
-    .then((response) => response.json())
+    //.then((response) => {response.json()})
     .then((res) => {console.log(res) });
     console.log(this.state.username)
     // get data
-  fetch("/postData", {
+  fetch("/api/login", {
     method:'POST',
     headers: {
       'Accept':'application/json',
       'Content-Type':'application/json'
     },
-    body: JSON.stringify({username:this.state.username,password: this.state.password})
+    body: JSON.stringify({
+        userName:this.state.username,
+        passwordHash: this.state.password,
+    isTeacher: true,
+    certificationNumber: this.state.certificate,
+    emailAddress: this.state.email
+})
   })
   .then((response) => response.json())
   .then((res) => {console.log(res) });
