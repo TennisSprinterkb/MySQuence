@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 const md5 = require('md5');
 const db = require("./models");
 const routes = require("./routes");
-const morgan = require('morgan');
 // const user = require("./routes/api/user-api-routes")
 // const sequence = require("./routes/api/sequence-api-routes")
 // Route requires
