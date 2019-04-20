@@ -29,6 +29,7 @@ class AsanaCard extends Component {
       selected: selected
     })
     console.log(this.state.selected);
+    localStorage.setItem("selectString", this.state.selected);
     this.setState({ clicked: !this.state.clicked })
   }
 
