@@ -22,25 +22,25 @@ class InstPage extends React.Component {
             <ListItemText disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30, fontFamily: '' }}>
             Find  a Studio</Typography>}/> 
             </ListItem>
-            <br></br>
+            
             <ListItem  button component="a" href="https://www.google.com">
             <i class="material-icons prefix">videocam</i>
             <ListItemText  disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30 }}>
             Create A Video</Typography>}/>
             </ListItem>
-            <br></br>
+    
             <ListItem button component="a" href="https://www.google.com">
             <i class="material-icons prefix">add_circle</i>
             <ListItemText  disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30 }}>
             Build a Sequence</Typography>}/>
             </ListItem>
-            <br></br>
+          
             <ListItem button component="a" href="https://www.google.com">
             <i class="material-icons prefix">mood</i>
             <ListItemText  disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30 }}>
             Breathe</Typography>}/>
             </ListItem>
-            <br></br>
+
             </List>
            </div>
            </div>

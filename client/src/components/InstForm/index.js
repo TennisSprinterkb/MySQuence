@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import "./style.css";
 
 class InstForm extends Component {
 
@@ -9,7 +10,6 @@ class InstForm extends Component {
     this.state = {
         username: '',
         password: '',
-
         confirmPassword: '',
 
     }
@@ -29,19 +29,25 @@ handleChange(event) {
 handleSubmit(event) {
     event.preventDefault()
     fetch("/getData")
-    .then((response) => response.json())
+    // .then((response) => response.json())
     .then((res) => {console.log(res) });
 
     // get data
-  fetch("/postData", {
+  fetch("/api/login", {
     method:'POST',
     headers: {
       'Accept':'application/json',
       'Content-Type':'application/json'
     },
-    body: JSON.stringify({username:this.state.username,password: this.state.password})
+    body: JSON.stringify({
+        userName:this.state.username,
+        passwordHash: this.state.password,
+        emailAddress: this.state.email,
+        isTeacher: true,
+        certificationNumber: this.state.certificate
+    })
   })
-  .then((response) => response.json())
+//   .then((response) => response.json())
   .then((res) => {console.log(res) });
     
 
@@ -60,7 +66,7 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-
+                        name="username"
                         type="text"
                         id="username"
                         value={this.state.username}
@@ -72,31 +78,31 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-
+                        name="password"
                         type="password"
-                        id="Password"
+                        id="password"
                         value={this.state.password}
                         onChange={this.handleChange}>
                         </input>
-                        <label for="Password">Password</label>
+                        <label for="password">Password</label>
                     </div>
                 </div>
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-
+                        name="email"
                         type="email"
                         id="email"
                         value={this.state.email}
                         onChange={this.handleChange}>
                         </input>
-                        <label for="Password">Email</label>
+                        <label for="email">Email</label>
                     </div>
                 </div>
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-
+                        name="certifcate"
                         type="text"
                         id="certificate"
                         value={this.state.certificate}

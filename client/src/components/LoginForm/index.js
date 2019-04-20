@@ -70,14 +70,13 @@ class LoginForm extends Component {
                                         <div className="input-field col s12">
                                             <i class="material-icons prefix">account_circle</i>
                                             <input 
-
                                             type="text"
-                                            name="Username"
-                                            id="Username"
+                                            name="username"
+                                            id="username"
                                             value={this.state.username}
                                             onChange={this.handleChange}>
                                             </input>
-                                            <label for="Username">Username</label>
+                                            <label for="username">Username</label>
                                         </div>
 
                                     </div>
@@ -85,14 +84,13 @@ class LoginForm extends Component {
                                         <div className="input-field col s12">
                                             <i class="material-icons prefix">lock</i>
                                             <input 
-                                            // placeholder="Password"
                                             type="password"
-                                            name="Password"
-                                            id="Password"
+                                            name="password"
+                                            id="password"
                                             value={this.state.password}
                                             onChange={this.handleChange}>
                                             </input>
-                                            <label for="Password">Password</label>
+                                            <label for="password">Password</label>
                                         </div>
                                     </div>
                                     <div className="row">
