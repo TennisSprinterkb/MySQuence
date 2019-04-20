@@ -1,0 +1,45 @@
+.input-field input:valid {
+    border: 1px solid #5f3a8b;
+    background-color: rgba(220, 220, 220, 0.5);
+    opacity: 50%;
+    
+  }
+
+  .input-field input:hover {
+    border: 1px solid #5f3a8b;
+    background-color: lavenderblush;
+   
+  }
+
+  .try:active {
+      color: #5f3a8b
+  }
+
+  .btn {
+      background-color: #5f3a8b;
+      border: #5f3a8b;
+      margin: 1%;
+  }
+
+  .btn:hover {
+      background-color: #b069ac;
+      border: #b069ac;
+  }
+  .btn:active {
+    background-color: #b069ac;
+    border: #b069ac; 
+  }
+  .btn:focus {
+    background-color: #b069ac;
+    border: #b069ac; 
+  }
+
+  .btn:visited {
+    background-color: #5f3a8b;
+    border: #5f3a8b; 
+  }
+
+  .heading {
+      color: #5f3a8b;
+  }
+

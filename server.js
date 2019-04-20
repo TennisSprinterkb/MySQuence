@@ -1,4 +1,5 @@
 const express = require('express');
+const morgan = require('morgan');
 const app = express();
 const bodyParser = require('body-parser');
 const md5 = require('md5');
@@ -9,7 +10,7 @@ const routes = require("./routes");
 // Route requires
 
 app.use(bodyParser.urlencoded({extended:true}));
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 app.get("/getData", (req, res) => {//must have the /routeName to work with React front end.
     // console.log("hi");
@@ -31,7 +32,7 @@ app.post("/postLogin", (req, res) => {//must have the /routeName to work with Re
 	res.json({ responseData: 'responseTestData' })
 });
 
-
+app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // parse application/json

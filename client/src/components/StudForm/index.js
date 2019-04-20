@@ -27,19 +27,25 @@ handleSubmit(event) {
 
     event.preventDefault()
     fetch("/getData")
-    .then((response) => response.json())
+    // .then((response) => response.json())
     .then((res) => {console.log(res) });
 
     // get data
-  fetch("/postData", {
+  fetch("/api/login", {
     method:'POST',
     headers: {
       'Accept':'application/json',
       'Content-Type':'application/json'
     },
-    body: JSON.stringify({username:this.state.username,password: this.state.password})
+    body: JSON.stringify({
+        userName:this.state.username,
+        passwordHash: this.state.password,
+        emailAddress: this.state.email,
+        isTeacher: false,
+        certificationNumber: null
+    })
   })
-  .then((response) => response.json())
+//   .then((response) => response.json())
   .then((res) => {console.log(res) });
     
 
