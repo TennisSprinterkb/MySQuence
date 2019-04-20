@@ -5,9 +5,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../src/components/Home";
 // import Signup from "../src/components/Signup";
 // import LoginInput from "../src/components/Login";
-//import AsanaCard from "../src/components/AsanaCard";
 import Mapbox from "../src/components/Mapbox";
-import Nav from "./components/Nav";
+import AsanaPage from "../src/components/AsanaPage";
+import SelectedPage from "../src/components/SelectedPage";
+// import Nav from "./components/Nav";
 
 class App extends Component {
   constructor() {
@@ -34,23 +35,35 @@ class App extends Component {
   render() {
     return (
       <div>
-            <Router>
-              <Switch>
-                <Route
-                  exact path="/"
-                  render={() =>
-                    <Home />}
-                />
-                <Route
-                  exact path="/map"
-                  render={() =>
-                    <Mapbox />}
-                />
+        <Router>
+          <Switch>
+            <Route
+              exact path="/"
+              render={() =>
+                <Home />}
+            />
+            <Route
+              exact path="/map"
+              render={() =>
+                <Mapbox />}
+            />
+
+            <Route
+              exact path="/asana"
+              render={() =>
+                <AsanaPage />}
+            />
+
+<Route
+              exact path="/selected"
+              render={() =>
+                <SelectedPage />}
+            />
 
 
-              </Switch>
-            </Router>
-         
+          </Switch>
+        </Router>
+
       </div>
     );
   }

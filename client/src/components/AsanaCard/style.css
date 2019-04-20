@@ -1,0 +1,39 @@
+.cardDiv{
+    background-image: linear-gradient(white, rgb(182, 120, 182));
+    background-repeat: no-repeat; 
+    background-size:cover;
+    height: 100%;
+    min-height: 100%;
+}
+
+a{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+h5{
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    background-color: red;
+}
+
+img{
+    max-width: 90%;
+}
+
+p{
+    padding:10px 10px;
+    margin: 0;
+}
+
+.footer{
+    margin-bottom:40px
+}
+
+.purple{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
