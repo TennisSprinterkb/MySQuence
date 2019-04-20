@@ -71,7 +71,7 @@ class AsanaCard extends Component {
           {this.state.filteredAsana.map((this._renderPose).bind(this))}
         </Row>
         <Row className="footer">
-          <a href="/selected" className="white-text center"><h4>Generate Sequence</h4></a>
+          <a href="/selected" className="white-text center"><h5>Generate Sequence</h5></a>
         </Row>
       </div>
     );
