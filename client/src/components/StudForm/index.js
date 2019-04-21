@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom';
 import axios from 'axios';
 import "./style.css";
 
@@ -47,6 +48,7 @@ handleSubmit(event) {
   })
 //   .then((response) => response.json())
   .then((res) => {console.log(res) });
+  this.props.history.push('/login')
     
 
     
@@ -116,4 +118,4 @@ render() {
 }
 
 }
-export default StudForm;
+export default withRouter(StudForm)

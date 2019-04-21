@@ -9,6 +9,7 @@ import Mapbox from "../src/components/Mapbox";
 import AsanaPage from "../src/components/AsanaPage";
 import SelectedPage from "../src/components/SelectedPage";
 // import Nav from "./components/Nav";
+import BreathePage from "../src/components/BreathePage";
 
 class App extends Component {
   constructor() {
@@ -59,7 +60,11 @@ class App extends Component {
               render={() =>
                 <SelectedPage />}
             />
-
+            <Route
+              exact path="/breathe"
+              render={() =>
+                <BreathePage />}
+            />
 
           </Switch>
         </Router>

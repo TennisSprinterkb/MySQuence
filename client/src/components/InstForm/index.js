@@ -1,12 +1,13 @@
 import React, {Component} from 'react';
+import {withRouter} from 'react-router-dom';
 import axios from 'axios';
 import "./style.css";
 
 class InstForm extends Component {
 
-    constructor() {
-        super()
-            
+    constructor(props) {
+        super(props)
+    
     this.state = {
         username: '',
         password: '',
@@ -15,6 +16,9 @@ class InstForm extends Component {
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
+    // this.Login = this.Login.bind(this)
+    // this.Signup = this.Signup.bind(this)
+    
     
 }
 
@@ -49,6 +53,8 @@ handleSubmit(event) {
   })
 //   .then((response) => response.json())
   .then((res) => {console.log(res) });
+  this.props.history.push('/login')
+  
     
 
     
@@ -129,5 +135,5 @@ render() {
 
 }
 
-export default InstForm;
+export default withRouter(InstForm)
 
