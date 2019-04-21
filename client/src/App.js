@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "../src/components/Home";
 // import Signup from "../src/components/Signup";
 // import LoginInput from "../src/components/Login";
+
 import Mapbox from "../src/components/Mapbox";
 import AsanaPage from "../src/components/AsanaPage";
 import SelectedPage from "../src/components/SelectedPage";
@@ -23,12 +24,13 @@ class App extends Component {
     this.updateUser = this.updateUser.bind(this)
   }
 
+  
   // componentDidMount() {
   //   this.getUser()
   // }
 
-  updateUser(userObject) {
-    this.setState(userObject)
+  updateUser(User) {
+    this.setState(User)
   }
 
 
