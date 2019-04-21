@@ -3,9 +3,7 @@ const router = require("express").Router();
 
 router.route("/sequence")
   .get(function(req, res) {
-    // 1. Add a join to include all of each Author's Posts
     db.Sequence.findAll({}).then(function(dbSequence) {
-      
       res.json(dbSequence);
     });
   })
@@ -15,12 +13,63 @@ router.route("/sequence")
     });
   })
 
-router.route("/login")
+router.route("/signup")
   .post(function(req, res) {
-    db.User.create(req.body).then(function(dbUser) {
-      res.json(dbUser);
+    console.log(req.body);
+    db.Users.create(req.body).then(function(dbUsers) {
+      res.json(dbUsers);
     });
-  })
+  });
+
+  // router.route("/signup")
+  // .post(function(req, res) {
+  //   console.log(req.body);
+  //   db.userObject.create(req.body).then(function(userObject) {
+  //     res.json(userObject);
+  //   });
+  // });
+
+  router.route("/signup")
+  .get(function(req, res){ 
+   db.userObject.findAll({}).then(function(dbuserObj) {
+    console.log("this is the response obj" + dbuserObj)
+    res.json(dbuserObj);
+  });
+});
+
+  router.route("/login/:name")
+    .get(function(req, res){ 
+     db.Users.findOne({
+      where: {
+        userName: "Lily",
+        passwordHash: "Lily",
+      }
+    }).then(function(dbUsers) {
+      console.log("this is the response obj" + dbUsers)
+      res.json(dbUsers);
+    });
+  });
+
+  router.route("/login")
+  .get(function(req, res){ 
+    console.log(req.Users) 
+   db.Users.findAll({}).then(function(dbUsers) {
+    console.log("this is the response obj" + dbUsers)
+    res.json(dbUsers);
+  });
+});
+  
+
+router.route("/login")
+.get(function(req, res){ 
+  console.log(req.Users) 
+ db.Users.findAll({}).then(function(dbUsers) {
+  console.log("this is the response obj" + dbUsers)
+  res.json(dbUsers);
+});
+});
+
+
 module.exports = router
 // module.exports = function(app) {
 //     app.get("/api/sequence", function(req, res) {
