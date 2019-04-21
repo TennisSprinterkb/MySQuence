@@ -12,8 +12,6 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-
-
         <Router>
           <Switch>
             <Route
@@ -33,9 +31,6 @@ class Home extends React.Component {
               render={() =>
                 <Signup />}
             />
-          
-
-
           </Switch>
         </Router>
       </div>
