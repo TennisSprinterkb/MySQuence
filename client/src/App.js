@@ -7,7 +7,6 @@ import Home from "../src/components/Home";
 import Mapbox from "../src/components/Mapbox";
 import AsanaPage from "../src/components/AsanaPage";
 import SelectedPage from "../src/components/SelectedPage";
-// import Nav from "./components/Nav";
 import BreathePage from "../src/components/BreathePage";
 
 class App extends Component {
@@ -64,6 +63,16 @@ class App extends Component {
               exact path="/breathe"
               render={() =>
                 <BreathePage />}
+            />
+            <Route
+              exact path="/instpage"
+              render={() =>
+                <InstPage />}
+            />
+            <Route
+              exact path="/studpage"
+              render={() =>
+                <StudPage />}
             />
 
           </Switch>
