@@ -33,7 +33,7 @@ handleSubmit(event) {
     .then((res) => {console.log(res) });
 
     // get data
-  fetch("/api/login", {
+  fetch("/api/signup", {
     method:'POST',
     headers: {
       'Accept':'application/json',

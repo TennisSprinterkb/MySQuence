@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 import { Button, Card, CardTitle, Divider, Dropdown, Row, Col } from 'react-materialize';
 import asanaJson from '../../asana2.json';
+import Nav from "../Nav/index";
 
 
 class AsanaCard extends Component {
@@ -57,7 +58,9 @@ class AsanaCard extends Component {
 
   render() {
     return (
-      <div className="cardDiv">
+      <div>
+        <Nav />
+          <div className="cardDiv">
         <Row>
           <Dropdown trigger={<Button className="purple">Sort by Category</Button>}>
             {this.state.categories.map(category => (<p key={category} onClick={(this.filterAsana)} className="purple-text">
@@ -75,6 +78,7 @@ class AsanaCard extends Component {
           <a href="/selected" className="white-text center"><h5>Generate Sequence</h5></a>
         </Row>
       </div>
+    </div>
     );
   }
 }
