@@ -13,7 +13,7 @@ function Nav() {
           <ul class="right hide-on-med-and-down">
             <li><a href="/map">Find a Studio</a></li>
             <li><a href="badges.html">Create a Video</a></li>
-            <li><a href="collapsible.html">Build a Sequence</a></li>
+            <li><a href="/asana">Build a Sequence</a></li>
             <li><a href="mobile.html">Breathe</a></li>
             <li><a href="/">Logout</a></li>
           </ul>
@@ -24,7 +24,7 @@ function Nav() {
       <ul class="sidenav" id="mobile-demo">
         <li><a href="/map">Find a Studio</a></li>
         <li><a href="badges.html">Create a Video</a></li>
-        <li><a href="collapsible.html">Build a Sequence</a></li>
+        <li><a href="/asana">Build a Sequence</a></li>
         <li><a href="mobile.html">Breathe</a></li>
         <li><a href="/">Logout</a></li>
       </ul>
