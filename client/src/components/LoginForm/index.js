@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
+import {withRouter} from 'react-router-dom';
 import axios from 'axios'
 import "./style.css"
 
@@ -122,4 +123,4 @@ class LoginForm extends Component {
         }
     }
 
-    export default LoginForm
+export default withRouter(LoginForm)

@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
+<<<<<<< HEAD
+import {withRouter} from 'react-router-dom';
+import axios from 'axios';
+=======
 //import axios from 'axios';
+>>>>>>> 67ae2941c46de5e3ea065de8265bc862552a6e87
 import "./style.css";
 
 class StudForm extends Component {
@@ -47,6 +52,7 @@ handleSubmit(event) {
   })
 //   .then((response) => response.json())
   .then((res) => {console.log(res) });
+  this.props.history.push('/login')
     
 
     
@@ -116,4 +122,4 @@ render() {
 }
 
 }
-export default StudForm;
+export default withRouter(StudForm)

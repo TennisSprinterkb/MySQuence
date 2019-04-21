@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const md5 = require('md5');
+// const md5 = require('md5');
 const db = require("./models");
 const routes = require("./routes");
 const morgan = require("morgan");
@@ -20,7 +20,7 @@ app.get("/getData", (req, res) => {//must have the /routeName to work with React
 app.post("/postData", (req, res) => {//must have the /routeName to work with React front end.
   
 	let username = req.body.username;
-	let password = md5(req.body.password);
+	let password = (req.body.password);
 
 	res.json({responseData:'responseTestData'})
 });
@@ -28,7 +28,9 @@ app.post("/postData", (req, res) => {//must have the /routeName to work with Rea
 app.post("/postLogin", (req, res) => {//must have the /routeName to work with React front end.
 
 	let username = req.body.username;
-	let password = md5(req.body.password);
+	let password = (req.body.password);
+	// db.find(res)
+
 	res.json({ responseData: 'responseTestData' })
 });
 
