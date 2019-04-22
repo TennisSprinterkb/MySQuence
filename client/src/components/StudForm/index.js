@@ -1,10 +1,6 @@
 import React, {Component} from 'react';
-<<<<<<< HEAD
 import {withRouter} from 'react-router-dom';
-import axios from 'axios';
-=======
-//import axios from 'axios';
->>>>>>> 67ae2941c46de5e3ea065de8265bc862552a6e87
+// import axios from 'axios';
 import "./style.css";
 
 class StudForm extends Component {

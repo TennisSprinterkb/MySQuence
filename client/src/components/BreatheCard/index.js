@@ -7,33 +7,60 @@ import Nav from "../Nav"
 
 class BreatheCard extends Component {
 
-  state = {
-    filteredBreathe: breatheJson,
-    selected: []
-  };
+    state = {
+        filteredBreathe: breatheJson,
+        selected: [],
+        breathe: {},
+        modalOpen: false
+    };
 
+    showModal = (breathe) => {
+        this.setState({breathe},
+           () => {
+               this.setState({modalOpen: true})
+           }
+            )
+        console.log(breathe)
+    }
 
-  _renderBreathe(breathe) {
-    const { id, image } = breathe;
-    return (
-      <Col l={3} m={6} s={12}>
-        <img key={id} src={image} />
-      </Col>
-    );
-  }
+    _renderBreathe(breathe) {
+        const { id, image } = breathe;
+        return (
+            <Col l={3} m={6} s={12}>
+                <img key={id} src={image} onClick={ ()=> this.showModal(breathe)}/>
+            </Col>
+        );
+    }
 
-  render() {
-    return (
-      <div className="breatheDiv">
-      <Nav />
-        <br></br>
-        <br></br>
-        <Row>
-          {this.state.filteredBreathe.map((this._renderBreathe).bind(this))}
-        </Row>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="breatheDiv" onClick={ ()=> this.setState({modalOpen: false})}>
+                <Nav />
+                <br></br>
+                <h3>Choose a Favorite Breathing Exercise!</h3>
+                <br></br>
+                {
+                    this.state.modalOpen && 
+                    <div className="modal1">
+                    <div>
+                    <img src={this.state.breathe.image} class="renderedImage"/>
+                        </div>
+                        {/* <button onClick={ ()=> this.setState({modalOpen: false})}>X</button> */}
+                        </div>
+                        
+                }
+                {this.state.modalOpen === false &&  
+                
+                <Row>
+                    {this.state.filteredBreathe.map((this._renderBreathe).bind(this))}
+                </Row>
+                }
+                <br></br>
+                <br></br>
+            </div>
+            
+        );
+    }
 }
 
 export default BreatheCard;
