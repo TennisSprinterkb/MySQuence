@@ -12,28 +12,6 @@ const morgan = require("morgan");
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-app.get("/getData", (req, res) => {//must have the /routeName to work with React front end.
-    // console.log("hi");
-    res.json({testData:'testData'})
-});
-
-app.post("/postData", (req, res) => {//must have the /routeName to work with React front end.
-  
-	let username = req.body.username;
-	let password = (req.body.password);
-
-	res.json({responseData:'responseTestData'})
-});
-
-app.post("/postLogin", (req, res) => {//must have the /routeName to work with React front end.
-
-	let username = req.body.username;
-	let password = (req.body.password);
-	// db.find(res)
-
-	res.json({ responseData: 'responseTestData' })
-});
-
 
 app.use(morgan("dev"));
 

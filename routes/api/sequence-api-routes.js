@@ -2,11 +2,11 @@ const db = require("../../models");
 const router = require("express").Router();
 
 router.route("/sequence")
-  .get(function(req, res) {
-    db.Sequence.findAll({}).then(function(dbSequence) {
-      res.json(dbSequence);
-    });
-  })
+  // .get(function(req, res) {
+  //   db.Sequence.findAll({}).then(function(dbSequence) {
+  //     res.json(dbSequence);
+  //   });
+  // })
   .post(function(req, res) {
     db.Sequence.create(req.body).then(function(dbSequence) {
       res.json(dbSequence);
