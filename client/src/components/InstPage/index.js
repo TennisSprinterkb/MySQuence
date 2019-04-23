@@ -8,6 +8,10 @@ import './style.css';
 
 class InstPage extends React.Component {
 
+    
+    
+    
+    
     render() {
         return (
             <div>
@@ -51,6 +55,7 @@ class InstPage extends React.Component {
 
 
         );
+    
     }
 }
 export default InstPage;
