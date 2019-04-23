@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {withRouter} from 'react-router-dom';
-import axios from 'axios';
+// import axios from 'axios';
 import "./style.css";
 
 class InstForm extends Component {
@@ -11,8 +11,7 @@ class InstForm extends Component {
     this.state = {
         username: '',
         password: '',
-        confirmPassword: '',
-
+        confirmPassword: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)

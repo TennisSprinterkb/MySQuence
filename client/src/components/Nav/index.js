@@ -14,7 +14,7 @@ function Nav() {
             <li><a href="/map">Find a Studio</a></li>
             <li><a href="/asana">Build a Sequence</a></li>
             <li><a href="/">Create a Video</a></li>
-            <li><a href="/">Breathe</a></li>
+            <li><a href="/breathe">Breathe</a></li>
             <li><a href="/">Logout</a></li>
           </ul>
         </div>
@@ -25,7 +25,7 @@ function Nav() {
         <li><a href="/map">Find a Studio</a></li>
         <li><a href="/asana">Build a Sequence</a></li>
         <li><a href="/">Create a Video</a></li>
-        <li><a href="/">Breathe</a></li>
+        <li><a href="/breathe">Breathe</a></li>
         <li><a href="/">Logout</a></li>
       </ul>
     </div>

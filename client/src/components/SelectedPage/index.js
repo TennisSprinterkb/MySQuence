@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 import { Card, CardTitle, Row, Col } from 'react-materialize';
 import asanaJson from '../../asana2.json';
+import Nav from '../Nav';
 
 class SelectedPage extends Component {
   state = {
@@ -23,7 +24,7 @@ class SelectedPage extends Component {
 
     var element = newArray[currentIndex];
     newArray.splice(currentIndex, 1);
-    newArray.splice((currentIndex -1), 0, element);
+    newArray.splice((currentIndex - 1), 0, element);
     // save the new array to state
     this.setState({
       selectArray: newArray
@@ -39,7 +40,7 @@ class SelectedPage extends Component {
 
     var element = newArray[currentIndex];
     newArray.splice(currentIndex, 1);
-    newArray.splice((currentIndex +1), 0, element);
+    newArray.splice((currentIndex + 1), 0, element);
     // save the new array to state
     this.setState({
       selectArray: newArray
@@ -74,16 +75,16 @@ class SelectedPage extends Component {
           reveal={<div><p>{cues}</p><p>Category: {category}</p><p>Great for targeting: {targetArea}</p><p>Translation: {translation}</p></div>}>
           <span>{sanskrit_name}</span>
 
-          <a className="btn upBtn" 
-          href={id} id={id} 
-          disabled={this.state.selectArray.indexOf(parseInt(id))=== 0 ? true : false} 
-          onClick={this.moveUpOrder}>
-          <i className="material-icons left">arrow_upward</i>Move Up</a>
-          
-          <a className="btn downBtn"           
-          href={id} id={id} 
-          disabled={this.state.selectArray.indexOf(parseInt(id))=== this.state.selectArray.length-1 ? true : false} 
-          onClick={this.moveDownOrder}><i className="material-icons left">arrow_downward</i>Move Down</a>
+          <a className="btn upBtn"
+            href={id} id={id}
+            disabled={this.state.selectArray.indexOf(parseInt(id)) === 0 ? true : false}
+            onClick={this.moveUpOrder}>
+            <i className="material-icons left">arrow_upward</i>Move Up</a>
+
+          <a className="btn downBtn"
+            href={id} id={id}
+            disabled={this.state.selectArray.indexOf(parseInt(id)) === this.state.selectArray.length - 1 ? true : false}
+            onClick={this.moveDownOrder}><i className="material-icons left">arrow_downward</i>Move Down</a>
         </Card>
       </Col>
     );
@@ -92,12 +93,15 @@ class SelectedPage extends Component {
   // Renders on the DOM here
   render() {
     return (
-      <div className="cardDiv">
-        <p id="instruct">Move your selected poses into your desired order with arrow buttons</p>
-        <button onClick={this.checkString}>Check the string again</button>
-        <Row>
-          {this.state.filteredAsana.map((this._renderPose).bind(this))}
-        </Row>
+      <div>
+        <Nav />
+        <div className="cardDiv">
+          <p id="instruct">Move your selected poses into your desired order with arrow buttons</p>
+          <button onClick={this.checkString}>Check the string again</button>
+          <Row>
+            {this.state.filteredAsana.map((this._renderPose).bind(this))}
+          </Row>
+        </div>
       </div>
     );
   }

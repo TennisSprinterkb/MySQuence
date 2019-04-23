@@ -39,7 +39,7 @@ class StudPage extends React.Component {
                 Build a Sequence</Typography>} />
             </ListItem>
             <br></br>
-            <ListItem button component="a" href="https://www.google.com">
+            <ListItem button component="a" href="/breathe">
               <i class="material-icons prefix">mood</i>
               <ListItemText disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30 }}>
                 Breathe</Typography>} />

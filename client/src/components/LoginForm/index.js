@@ -1,8 +1,6 @@
-
-import React, { Component } from 'react'
-import { Redirect } from 'react-router-dom'
+import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
-import axios from 'axios'
 import "./style.css"
 
 class LoginForm extends Component {
@@ -11,7 +9,7 @@ class LoginForm extends Component {
         this.state = {
             username: '',
             password: '',
-            redirectTo: null,
+            redirectTo: null
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)

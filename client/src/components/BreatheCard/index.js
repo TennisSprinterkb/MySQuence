@@ -37,7 +37,7 @@ class BreatheCard extends Component {
             <div className="breatheDiv" onClick={ ()=> this.setState({modalOpen: false})}>
                 <Nav />
                 <br></br>
-                <h3>Choose a Favorite Breathing Exercise!</h3>
+                <h3 class="choose">Choose a Favorite Breathing Exercise!</h3>
                 <br></br>
                 {
                     this.state.modalOpen && 
