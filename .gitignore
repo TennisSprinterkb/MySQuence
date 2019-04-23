@@ -4,5 +4,3 @@
 /client/.env
 .vscode
 
-"proxy": "http://localhost:3001"
-
