@@ -45,7 +45,6 @@ class BreatheCard extends Component {
                     <div>
                     <img src={this.state.breathe.image} class="renderedImage"/>
                         </div>
-                        {/* <button onClick={ ()=> this.setState({modalOpen: false})}>X</button> */}
                         </div>
                         
                 }
