@@ -27,10 +27,7 @@ handleChange(event) {
 handleSubmit(event) {
 
     event.preventDefault()
-    fetch("/getData")
-    // .then((response) => response.json())
-    .then((res) => {console.log(res) });
-
+   
     // get data
   fetch("/api/signup", {
     method:'POST',
