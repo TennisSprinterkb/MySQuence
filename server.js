@@ -15,7 +15,6 @@ app.use(bodyParser.json());
 
 app.use(morgan("dev"));
 
-app.use(bodyParser.urlencoded({ extended: true }));
 
 // parse application/json
 
