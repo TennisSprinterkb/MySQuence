@@ -33,30 +33,35 @@ class LoginForm extends Component {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                userName: this.state.username,
-                passwordHash: this.state.password,
+                username: this.state.username,
+                password: this.state.password,
             })
         })
-            .then(response => {
-                console.log('login response: ')
-                if (response.status === 200) {
-                    console.log(response);
-                    // update App.js state
-                    this.props.updateUser({
-                        loggedIn: true,
-                        userName: response.data.userName
+            .then(response => response.json()
+            .then (response => {console.log(JSON.stringify(response))
+                
+                let Teach = JSON.stringify(response.dbUser.isTeacher)
+
+            console.log(Teach)
+                
+            if(Teach === true) {
+                this.setState({
+                    
+                      redirectTo: '/instpage'
+                
                     })
-                    // update the state to redirect to home
-                    this.setState({
-                        redirectTo: '/'
-                    })
-                }
+            } else {
+                this.setState({
+                    redirectTo: '/studpage'
+                })
+            }
             }).catch(error => {
                 console.log('login error: ')
                 console.log(error);
 
             })
-        }
+        )}
+    
 
 
 

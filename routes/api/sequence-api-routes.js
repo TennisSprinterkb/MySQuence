@@ -1,6 +1,10 @@
 const db = require("../../models");
 const router = require("express").Router();
 
+router.get('/', function (req, res) {
+  res.send("root")
+})
+
 router.route("/sequence")
   .get(function(req, res) {
     db.Sequence.findAll({}).then(function(dbSequence) {
@@ -12,15 +16,13 @@ router.route("/sequence")
       res.json(dbSequence);
     });
   })
-
 router.route("/signup")
   .post(function(req, res) {
     console.log(req.body);
-    db.Users.create(req.body).then(function(dbUsers) {
-      res.json(dbUsers);
+    db.User.create(req.body).then(function(dbUser) {
+      res.json(dbUser);
     });
   });
-
   // router.route("/signup")
   // .post(function(req, res) {
   //   console.log(req.body);
@@ -28,117 +30,36 @@ router.route("/signup")
   //     res.json(userObject);
   //   });
   // });
-
-  router.route("/signup")
-  .get(function(req, res){ 
-   db.userObject.findAll({}).then(function(dbuserObj) {
-    console.log("this is the response obj" + dbuserObj)
-    res.json(dbuserObj);
+  router.route("/login")
+  .post(function(req, res, next){ 
+   db.User.findOne({
+    where: {
+      userName: req.body.username,
+      passwordHash: req.body.password,
+      
+    }
+    
+   }).then(function(dbUser) {
+    console.log("this is the response obj" + dbUser.userName)
+    res.json({dbUser});
+    next()
   });
 });
 
-  router.route("/login/:name")
+
+  router.route("/login")
     .get(function(req, res){ 
-     db.Users.findOne({
+     db.User.findOne({
       where: {
-        userName: "Lily",
-        passwordHash: "Lily",
+        userName: req.body.username,
+        passwordHash: req.body.password
+        
       }
-    }).then(function(dbUsers) {
-      console.log("this is the response obj" + dbUsers)
-      res.json(dbUsers);
+    }).then(function(dbUser) {
+      console.log("this is the response obj" + dbUser.userName)
+      res.json(dbUser.userName);
+      console.log(res);
     });
   });
 
-  router.route("/login")
-  .get(function(req, res){ 
-    console.log(req.Users) 
-   db.Users.findAll({}).then(function(dbUsers) {
-    console.log("this is the response obj" + dbUsers)
-    res.json(dbUsers);
-  });
-});
-  
-
-router.route("/login")
-.get(function(req, res){ 
-  console.log(req.Users) 
- db.Users.findAll({}).then(function(dbUsers) {
-  console.log("this is the response obj" + dbUsers)
-  res.json(dbUsers);
-});
-});
-
-
 module.exports = router
-// module.exports = function(app) {
-//     app.get("/api/sequence", function(req, res) {
-//       // 1. Add a join to include all of each Author's Posts
-//       db.Sequence.findAll({
-//         include: [db.User]
-//       }).then(function(dbSequence) {
-        
-//         res.json(dbSequence);
-//       });
-//     });
-  
-  
-  
-//   app.get("/api/sequence/:id", function(req, res) {
-//     // 2; Add a join to include all of the Author's Posts here
-//     db.Sequence.findOne({
-//       where: {
-//         id: req.params.id
-//       }
-//     }).then(function(dbSequence) {
-//       res.json(dbSequence);
-//     });
-//   });
-
-
-//   // app.post("/api/sequence/:id", function(req, res) {
-//   //   // 2; Add a join to include all of the Author's Posts here
-//   //   db.Sequence.findOneAndUpdate({
-//   //     where: {
-//   //       id: req.params.id
-//   //     }
-//   //   }).then(function(dbSequence) {
-//   //     res.json(dbSequence);
-//   //   });
-//   // });
-
-
-//   // app.post("/api/sequence", function(req, res) {
-//   //   db.Sequence.create(req.body).then(function(dbSequence) {
-//   //     res.json(dbSequence);
-//   //   });
-//   // });
-
-
-//   // app.delete("/api/sequence/:id", function(req, res) {
-//   //   db.Sequence.destroy({
-//   //     where: {
-//   //       id: req.params.id
-//   //     }
-//   //   }).then(function(dbSequence) {
-//   //     res.json(dbSequence);
-//   //   });
-//   // });
-
-// };
-
-
-
-
-//    // Get all available sequences.
-//    app.get("/api/sequences", function(req, res) {
-//     db.Sequence.findAll({}).then(function(sequences) {
-//       res.json(sequences);
-//     });
-//   });
-
-//   // Post a new sequence in the database.
-//   app.post("/api/sequences", function(req, res) {
-//     db.Sequence.create(req.body).then(function(sequence) {
-//       res.json(sequences);
-//     });
