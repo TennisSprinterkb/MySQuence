@@ -37,7 +37,7 @@ class LoginForm extends Component {
                 password: this.state.password,
             })
         })
-            .then(response => response.json()
+            // .then(response => response.json())
             .then (response => {console.log(JSON.stringify(response))
                 
                 let Teach = response.dbUser.isTeacher
@@ -60,7 +60,7 @@ class LoginForm extends Component {
                 console.log(error);
 
             })
-        )}
+        }
     
 
 
