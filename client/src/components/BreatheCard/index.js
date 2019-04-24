@@ -37,13 +37,13 @@ class BreatheCard extends Component {
             <div className="breatheDiv" onClick={ ()=> this.setState({modalOpen: false})}>
                 <Nav />
                 <br></br>
-                <h3 class="choose">Choose a Favorite Breathing Exercise!</h3>
+                <h3 className="choose">Choose a Favorite Breathing Exercise!</h3>
                 <br></br>
                 {
                     this.state.modalOpen && 
                     <div className="modal1">
                     <div>
-                    <img src={this.state.breathe.image} class="renderedImage"/>
+                    <img src={this.state.breathe.image} className="renderedImage"/>
                         </div>
                         </div>
                         

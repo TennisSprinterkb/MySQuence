@@ -21,9 +21,9 @@ if (process.env.NODE_ENV === "production") {
 //app.use(user);
 app.use(routes);
 
-app.get('*', (request, response) => {
-  response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-});
+// app.get('*', (request, response) => {
+//   response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+// });
 
 // listen on port 3000
 var PORT = process.env.PORT || 3001;
