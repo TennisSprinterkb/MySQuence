@@ -7,6 +7,7 @@ import Home from "../src/components/Home";
 import Mapbox from "../src/components/Mapbox";
 import AsanaPage from "../src/components/AsanaPage";
 import SelectedPage from "../src/components/SelectedPage";
+import SavedPage from "../src/components/SavedPage";
 import BreathePage from "../src/components/BreathePage";
 
 class App extends Component {
@@ -22,7 +23,6 @@ class App extends Component {
     this.updateUser = this.updateUser.bind(this)
   }
 
-  
   // componentDidMount() {
   //   this.getUser()
   // }
@@ -59,6 +59,13 @@ class App extends Component {
               render={() =>
                 <SelectedPage />}
             />
+
+            <Route
+              exact path="/saved"
+              render={() =>
+                <SavedPage />}
+            />
+
             <Route
               exact path="/breathe"
               render={() =>
