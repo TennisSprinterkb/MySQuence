@@ -8,6 +8,7 @@ import './style.css';
 
 class StudPage extends React.Component {
 
+
   render() {
     return (
       <div>

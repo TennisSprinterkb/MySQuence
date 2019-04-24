@@ -22,10 +22,10 @@ class App extends Component {
     this.updateUser = this.updateUser.bind(this)
   }
 
-  
-  // componentDidMount() {
-  //   this.getUser()
+  // componentDidMount(){
+    
   // }
+ 
 
   updateUser(User) {
     this.setState(User)
@@ -34,7 +34,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      // <div>
         <Router>
           <Switch>
             <Route
@@ -78,7 +78,7 @@ class App extends Component {
           </Switch>
         </Router>
 
-      </div>
+      // </div>
     );
   }
 }
