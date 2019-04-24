@@ -26,25 +26,25 @@ class InstPage extends React.Component {
 
                     <List className="instpage">
                         <ListItem button component="a" href="/map">
-                            <i class="material-icons prefix">near_me</i>
-                            <ListItemText className disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30, fontFamily: '' }}>
+                            <i className="material-icons prefix">near_me</i>
+                            <ListItemText disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30, fontFamily: '' }}>
                                 Find  a Studio</Typography>} />
                         </ListItem>
 
                         <ListItem button component="a" href="https://www.google.com">
-                            <i class="material-icons prefix">videocam</i>
+                            <i className="material-icons prefix">videocam</i>
                             <ListItemText disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30 }}>
                                 Create A Video</Typography>} />
                         </ListItem>
 
                         <ListItem button component="a" href="/asana">
-                            <i class="material-icons prefix">add_circle</i>
+                            <i className="material-icons prefix">add_circle</i>
                             <ListItemText disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30 }}>
                                 Build a Sequence</Typography>} />
                         </ListItem>
 
                         <ListItem button component="a" href="/breathe">
-                            <i class="material-icons prefix">mood</i>
+                            <i className="material-icons prefix">mood</i>
                             <ListItemText disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30 }}>
                                 Breathe</Typography>} />
                         </ListItem>

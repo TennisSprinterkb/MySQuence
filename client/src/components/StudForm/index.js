@@ -57,7 +57,7 @@ render() {
     return(
         <div className="row">
             <form className="col s12 center-align main">
-                <div class="row">
+                <div className="row">
                     <div className="col s12"><h4 className="heading center-align">Student Sign-Up</h4></div>
                 </div>	
                     

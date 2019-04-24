@@ -22,25 +22,25 @@ class StudPage extends React.Component {
 
           <List>
             <ListItem button component="a" href="/map">
-              <i class="material-icons prefix">near_me</i>
+              <i className="material-icons prefix">near_me</i>
               <ListItemText disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30, fontFamily: '' }}>
                 Find  a Studio</Typography>} />
             </ListItem>
             <br></br>
             <ListItem button component="a" href="https://www.google.com">
-              <i class="material-icons prefix">video_label</i>
+              <i className="material-icons prefix">video_label</i>
               <ListItemText disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30 }}>
                 Watch a Video</Typography>} />
             </ListItem>
             <br></br>
             <ListItem button component="a" href="/asana">
-              <i class="material-icons prefix">add_circle</i>
+              <i className="material-icons prefix">add_circle</i>
               <ListItemText disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30 }}>
                 Build a Sequence</Typography>} />
             </ListItem>
             <br></br>
             <ListItem button component="a" href="/breathe">
-              <i class="material-icons prefix">mood</i>
+              <i className="material-icons prefix">mood</i>
               <ListItemText disableTypography primary={<Typography type="h1" style={{ color: '#8e24aa', fontSize: 30 }}>
                 Breathe</Typography>} />
             </ListItem>
