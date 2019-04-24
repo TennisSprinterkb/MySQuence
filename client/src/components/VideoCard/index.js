@@ -11,26 +11,24 @@ class VideoCard extends Component {
     selected: []
   };
 
-
   _renderVideo(video) {
-    const { id, image } = video;
+    const { id, url } = video;
     return (
       <Col l={3} m={6} s={12}>
-        <img key={id} src={image} />
+        <img key={id} src={url} />
       </Col>
     );
   }
 
   render() {
     return (
-      <div className="videoDiv">
-      <Nav />
+      <div width="200px" height="200px" className="video-container">
+        <Nav />
         <br></br>
         <br></br>
-        <Row>
-          {this.state.filteredVideo.map((this._renderVideo).bind(this))}
-        </Row>
-      </div>
+        <iframe width="200" height="200" src="https://www.youtube.com/embed/6mXHknjEl0E?controls=0" 
+        frameborder="0" allow="accelerometer; picture-in-picture donotallowfullscreen"></iframe>
+      </div >
     );
   }
 }

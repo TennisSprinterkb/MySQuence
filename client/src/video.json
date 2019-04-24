@@ -2,16 +2,16 @@
     {
         "id": 1,
         "name": "video1",
-        "image": "https://vimeo.com/313073433"
+        "url": "https://vimeo.com/313073433"
     },
     {
         "id": 2,
         "name": "video2",
-        "image": "https://vimeo.com/309557789"
+        "url": "https://vimeo.com/309557789"
     },
     {
         "id": 3,
         "name": "video3",
-        "image": "https://vimeo.com/308928452i"
+        "url": "https://vimeo.com/308928452i"
     }
 ]
