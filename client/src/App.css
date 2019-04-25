@@ -62,12 +62,21 @@
   padding-top: 20%; 
 } */
 
-body {
-  background-image: url("../src/assets/images/download.jpg");
+.background {
+  background-image: url("./assets/images/download1.jpg");
   background-position: center;  
   background-repeat: no-repeat; 
   background-size: cover;
-  min-height: 100%;
+  min-height: 900px;
+}
+
+body {
+  background-image: linear-gradient(white, rgb(182, 120, 182));
+    background-repeat: no-repeat; 
+    background-size:cover;
+    height: 100%;
+    min-height: 100%;
+  
 } 
 
 

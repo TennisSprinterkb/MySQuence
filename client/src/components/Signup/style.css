@@ -61,3 +61,11 @@
     padding-top: 5%;
   } */
    
+  .background {
+    background-image: url("../../assets/images/download.jpg");
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-size: cover;
+    min-height: 900px;
+  }
+  
