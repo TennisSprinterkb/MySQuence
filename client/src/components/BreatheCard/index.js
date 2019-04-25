@@ -27,7 +27,7 @@ class BreatheCard extends Component {
         const { id, image } = breathe;
         return (
             <Col l={3} m={6} s={12}>
-                <img key={id} src={image} onClick={ ()=> this.showModal(breathe)}/>
+                <img key={id} src={image} alt={id} onClick={ ()=> this.showModal(breathe)}/>
             </Col>
         );
     }
@@ -43,7 +43,7 @@ class BreatheCard extends Component {
                     this.state.modalOpen && 
                     <div className="modal1">
                     <div>
-                    <img src={this.state.breathe.image} class="renderedImage"/>
+                    <img src={this.state.breathe.image} alt="" class="renderedImage"/>
                         </div>
                         </div>
                         
