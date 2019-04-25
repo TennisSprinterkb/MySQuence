@@ -16,9 +16,6 @@ class SelectedPage extends Component {
     this.filterAsana();
   }
 
-  checkString = () => console.log(this.state.selectArray)
-
-
   handleChange = (event) => {
     console.log(event.target.value)
     this.setState({
@@ -26,11 +23,8 @@ class SelectedPage extends Component {
     })
   }
 
-
-
   pushSequence = (event) => {
     event.preventDefault();
-
     const ids = this.state.selectArray
     const stringIds = JSON.stringify(ids);
     console.log(stringIds);
@@ -132,7 +126,6 @@ class SelectedPage extends Component {
         <Nav />
         <div className="cardDiv">
           <p id="instruct">Move your selected poses into your desired order with arrow buttons</p>
-          <button onClick={this.checkString}>Check the string again</button>
           <TextInput
             label = "Name Your Sequence"
             name="sequenceName"
