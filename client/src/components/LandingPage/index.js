@@ -27,6 +27,7 @@ class LandingPage extends React.Component {
 
       render(){
     return (
+      <div className="background">
         <div className="container">
           <div className="center-align">
               <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img>
@@ -43,6 +44,7 @@ class LandingPage extends React.Component {
                 </div>
 
             </div>
+          </div>
         
     )
 }

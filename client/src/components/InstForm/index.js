@@ -10,13 +10,12 @@ class InstForm extends Component {
     
     this.state = {
         username: '',
+
         password: '',
         confirmPassword: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
-    // this.Login = this.Login.bind(this)
-    // this.Signup = this.Signup.bind(this)
     
     
 }
@@ -32,7 +31,7 @@ handleChange(event) {
 handleSubmit(event) {
     event.preventDefault()
 
-    // get data
+    
   fetch("/api/signup", {
     method:'POST',
     headers: {
@@ -59,6 +58,7 @@ handleSubmit(event) {
     
 render() {
     return(
+    <div className="background">
         <div className="row">
             <form className="col s12 center-align main">
                 <div className="row">
@@ -124,6 +124,7 @@ render() {
                     </div>
                 </div>
             </form> 
+        </div>
         </div>
 
     )
