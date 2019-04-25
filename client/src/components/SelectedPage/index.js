@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './style.css';
-import { Card, CardTitle, Row, Col } from 'react-materialize';
+import { Card, CardTitle, Row, Col, TextInput} from 'react-materialize';
 import asanaJson from '../../asana2.json';
 import Nav from '../Nav';
 
 class SelectedPage extends Component {
   state = {
     filteredAsana: asanaJson,
-    selectArray: localStorage.getItem("selectString").split(",").map(Number)
+    selectArray: localStorage.getItem("selectString").split(",").map(Number),
+    sequenceName: ""
+
   };
 
   componentDidMount() {
@@ -15,6 +17,39 @@ class SelectedPage extends Component {
   }
 
   checkString = () => console.log(this.state.selectArray)
+
+
+  handleChange = (event) => {
+    console.log(event.target.value)
+    this.setState({
+      sequenceName: event.target.value
+    })
+  }
+
+
+
+  pushSequence = (event) => {
+    event.preventDefault();
+
+    const ids = this.state.selectArray
+    const stringIds = JSON.stringify(ids);
+    console.log(stringIds);
+    console.log(typeof stringIds);
+
+
+    fetch("/api/sequence", {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        sequenceName: this.state.sequenceName,
+        poseIds: stringIds,
+      })
+    })
+
+  }
 
   // Change the order of the array
   moveUpOrder = (event) => {
@@ -98,6 +133,15 @@ class SelectedPage extends Component {
         <div className="cardDiv">
           <p id="instruct">Move your selected poses into your desired order with arrow buttons</p>
           <button onClick={this.checkString}>Check the string again</button>
+          <TextInput
+            label = "Name Your Sequence"
+            name="sequenceName"
+            type="text"
+            id="sequenceName"
+            value={this.state.sequenceName}
+            onChange={this.handleChange}>
+          </TextInput>
+          <button onClick={this.pushSequence}>Push to database</button>
           <Row>
             {this.state.filteredAsana.map((this._renderPose).bind(this))}
           </Row>
