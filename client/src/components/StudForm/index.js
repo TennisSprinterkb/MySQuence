@@ -27,10 +27,7 @@ handleChange(event) {
 handleSubmit(event) {
 
     event.preventDefault()
-    fetch("/getData")
-    // .then((response) => response.json())
-    .then((res) => {console.log(res) });
-
+   
     // get data
   fetch("/api/signup", {
     method:'POST',
@@ -60,7 +57,7 @@ render() {
     return(
         <div className="row">
             <form className="col s12 center-align main">
-                <div class="row">
+                <div className="row">
                     <div className="col s12"><h4 className="heading center-align">Student Sign-Up</h4></div>
                 </div>	
                     

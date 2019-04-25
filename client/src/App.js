@@ -3,11 +3,14 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import InstPage from '../src/components/InstPage';
 import StudPage from '../src/components/StudPage';
-import Home from "../src/components/Home";
+import LandingPage from "../src/components/LandingPage";
 import Mapbox from "../src/components/Mapbox";
+import LoginForm from "../src/components/LoginForm";
+import Signup from "../src/components/Signup";
 import AsanaPage from "../src/components/AsanaPage";
 import SelectedPage from "../src/components/SelectedPage";
 import BreathePage from "../src/components/BreathePage";
+
 
 class App extends Component {
   constructor() {
@@ -37,10 +40,22 @@ class App extends Component {
       // <div>
         <Router>
           <Switch>
-            <Route
+          <Route
               exact path="/"
               render={() =>
-                <Home />}
+                <LandingPage />}
+            />
+            <Route
+              exact path="/login"
+              render={() =>
+                <LoginForm
+                  updateUser={this.updateUser}
+                />}
+            />
+            <Route
+              exact path="/signup"
+              render={() =>
+                <Signup />}
             />
             <Route
               exact path="/map"

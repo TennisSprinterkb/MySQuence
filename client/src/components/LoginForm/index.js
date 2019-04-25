@@ -37,14 +37,14 @@ class LoginForm extends Component {
                 password: this.state.password,
             })
         })
-            .then(response => response.json()
+            .then(response => response.json())
             .then (response => {console.log(JSON.stringify(response))
                 
-                let Teach = JSON.stringify(response.dbUser.isTeacher)
+                let Teach = response.dbUser.isTeacher
 
             console.log(Teach)
                 
-            if(Teach === true) {
+            if(Teach) {
                 this.setState({
                     
                       redirectTo: '/instpage'
@@ -60,7 +60,7 @@ class LoginForm extends Component {
                 console.log(error);
 
             })
-        )}
+        }
     
 
 
@@ -70,17 +70,17 @@ class LoginForm extends Component {
                 return <Redirect to={{ pathname: this.state.redirectTo }} />
             } else {
                 return (
-                    <div class="container">
+                    <div className="container">
                         <div className="center-align">
                             <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img>
                             <div className="row">
                                 <form className="col s12 center-align main">
-                                    <div class="row">
+                                    <div className="row">
                                         <div className="col s12"><h4 className="heading center-align">Login</h4></div>
                                     </div>
                                     <div className="row">
                                         <div className="input-field col s12">
-                                            <i class="material-icons prefix">account_circle</i>
+                                            <i className="material-icons prefix">account_circle</i>
                                             <input
                                                 type="text"
                                                 name="username"
@@ -94,7 +94,7 @@ class LoginForm extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="input-field col s12">
-                                            <i class="material-icons prefix">lock</i>
+                                            <i className="material-icons prefix">lock</i>
                                             <input
                                                 type="password"
                                                 name="password"
