@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import videoJson from '../../video.json';
-import { Row, Col } from 'react-materialize';
-import Nav from "../Nav"
+
 
 class VideoCard extends Component {
 
@@ -11,24 +10,58 @@ class VideoCard extends Component {
     selected: []
   };
 
-  _renderVideo(video) {
-    const { id, url } = video;
-    return (
-      <Col l={3} m={6} s={12}>
-        <img key={id} src={url} />
-      </Col>
-    );
-  }
-
   render() {
     return (
-      <div width="200px" height="200px" className="video-container">
-        <Nav />
-        <br></br>
-        <br></br>
-        <iframe width="200" height="200" src="https://www.youtube.com/embed/6mXHknjEl0E?controls=0" 
-        frameborder="0" allow="accelerometer; picture-in-picture donotallowfullscreen"></iframe>
-      </div >
+      <div >
+        <div className="container">
+          <div className="row">
+            <h2><u>Adrienne</u></h2>
+          </div>
+          <div className="row">
+            <div className="col s4">
+              <iframe width="280" height="160" src="https://www.youtube.com/embed/VvYCKlkLhNQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div >
+            <div className="col s4">
+              <iframe width="280" height="160" src="https://www.youtube.com/embed/xEyyu7kk0ZI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div className="col s4">
+              <iframe width="280" height="160" src="https://www.youtube.com/embed/OQ6NfFIr2jw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div >
+          </div>
+
+          <div className="row">
+            <h2><u>Faith</u></h2>
+          </div>
+          <div className="row">
+            <div className="col s4">
+            <iframe width="280" height="160" src="https://www.youtube.com/embed/e73mrxJVnco" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div >
+            <div className="col s4">
+            <iframe width="280" height="160" src="https://www.youtube.com/embed/svnovoS5Ics" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div className="col s4">
+            <iframe width="280" height="160" src="https://www.youtube.com/embed/-yZR0fdUqHM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div >
+          </div>
+
+          <div className="row">
+            <h2><u>John</u></h2>
+          </div>
+          <div className="row">
+            <div className="col s4">
+            <iframe width="280" height="160" src="https://www.youtube.com/embed/2AODIZKkhzw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div >
+            <div className="col s4">
+            <iframe width="280" height="160" src="https://www.youtube.com/embed/N2Y3sKujuBs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div className="col s4">
+            <iframe width="280" height="160" src="https://www.youtube.com/embed/Nt3IquURTH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div >
+          </div>
+
+        </div>
+      </div>
+
     );
   }
 }

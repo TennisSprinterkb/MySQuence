@@ -1,14 +1,21 @@
-.videoDiv{
-    /* background-image: linear-gradient(white, rgb(182, 120, 182)); */
-    background-repeat: no-repeat; 
-    background-size:cover;
-    height: 100%;
-    min-height: 100%;
+.video {
+    height: 200px;
+    width: 200px;
 }
 
 
-img{
-    max-width: 100%;
-}
+/* 
+Adrienne
+https://www.youtube.com/watch?v=VvYCKlkLhNQ
+https://www.youtube.com/watch?v=xEyyu7kk0ZI
+https://www.youtube.com/watch?v=OQ6NfFIr2jw
 
+Faith
+https://www.youtube.com/watch?v=e73mrxJVnco */
+/* https://www.youtube.com/watch?v=svnovoS5Ics
+https://www.youtube.com/watch?v=-yZR0fdUqHM */
 
+/* John */
+/* https://www.youtube.com/watch?v=2AODIZKkhzw&t=8s
+https://www.youtube.com/watch?v=N2Y3sKujuBs
+https://www.youtube.com/watch?v=Nt3IquURTH0 */
