@@ -9,7 +9,7 @@ class SavedPage extends Component {
   state = {
     filteredAsana: asanaJson,
     selectArray: [],
-    userId: localStorage.getItem("userId"),
+    userId: localStorage.getItem("UserId"),
     savedArray: [{ sequenceName: "sequence1", poseIds: "1, 2, 3" }, { sequenceName: "sequence2", poseIds: "4, 5, 6" }],
     sequenceName: ""
   };
