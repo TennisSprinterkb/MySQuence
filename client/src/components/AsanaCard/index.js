@@ -62,7 +62,7 @@ class AsanaCard extends Component {
         <Nav />
           <div className="cardDiv">
         <Row>
-          <Dropdown trigger={<Button className="purple">Sort by Category</Button>}>
+          <Dropdown trigger={<Button className="purple dropdown">Sort by Category</Button>}>
             {this.state.categories.map(category => (<p key={category} onClick={(this.filterAsana)} className="purple-text">
               {category}
             </p>))}
