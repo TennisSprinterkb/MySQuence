@@ -54,6 +54,7 @@ handleSubmit(event) {
     
 render() {
     return(
+    
         <div className="row">
             <form className="col s12 center-align main">
                 <div className="row">
@@ -109,7 +110,7 @@ render() {
                 </div>
             </form> 
         </div>
-
+    
     )
 }
 

@@ -9,7 +9,6 @@ function Nav() {
           <div className="center-align">
             <img src="https://dewey.tailorbrands.com/production/brand_version_mockup_image/677/1888743677_5dd6243e-d8c4-444a-8bd2-d07dce7dbcda.png" alt="logo"></img>
       
-          {/* <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a> */}
           <ul className="right hide-on-med-and-down">
             <li><a href="/map">Find a Studio</a></li>
             <li><a href="/asana">Build a Sequence</a></li>
@@ -19,7 +18,7 @@ function Nav() {
           </ul>
         </div>
         </div>
-      </nav>
+          <a href="" data-target="mobile-demo" className="sidenav-trigger"><i className="material-icons">menu</i></a>
 
       <ul className="sidenav" id="mobile-demo">
         <li><a href="/map">Find a Studio</a></li>
@@ -28,6 +27,7 @@ function Nav() {
         <li><a href="/breathe">Breathe</a></li>
         <li><a href="/">Logout</a></li>
       </ul>
+      </nav>
     </div>
   );
 }
