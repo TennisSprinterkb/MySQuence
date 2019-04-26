@@ -32,7 +32,7 @@ class Mapbox extends Component {
     return (
       <Marker key={i} longitude={coordinates.longitude} latitude={coordinates.latitude}
         captureDrag={false} captureDoubleClick={false}>
-        <a href={url}>
+        <a target="_blank" rel="noopener noreferrer" href={url}>
           <div className="studio">
             <span>{name}</span>
           </div>
