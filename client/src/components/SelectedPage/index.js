@@ -8,7 +8,8 @@ class SelectedPage extends Component {
   state = {
     filteredAsana: asanaJson,
     selectArray: localStorage.getItem("selectString").split(",").map(Number),
-    sequenceName: ""
+    sequenceName: "",
+    UserId: localStorage.getItem("UserId")
 
   };
 
@@ -46,6 +47,7 @@ class SelectedPage extends Component {
       body: JSON.stringify({
         sequenceName: this.state.sequenceName,
         poseIds: stringIds,
+        UserId: this.state.UserId
       })
     })
 

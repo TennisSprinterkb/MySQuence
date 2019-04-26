@@ -41,6 +41,9 @@ class LoginForm extends Component {
             .then (response => {console.log(JSON.stringify(response))
                 
                 let Teach = response.dbUser.isTeacher
+                let UserId = response.dbUser.id
+
+                localStorage.setItem("UserId", UserId);
 
             console.log(Teach)
                 
