@@ -10,6 +10,8 @@ import Signup from "../src/components/Signup";
 import AsanaPage from "../src/components/AsanaPage";
 import SelectedPage from "../src/components/SelectedPage";
 import BreathePage from "../src/components/BreathePage";
+import VideoPage from "../src/components/VideoPage"
+
 
 
 class App extends Component {
@@ -89,6 +91,12 @@ class App extends Component {
               render={() =>
                 <StudPage />}
             />
+            <Route
+              exact path="/videopage"
+              render={() =>
+                <VideoPage />}
+            />
+
 
           </Switch>
         </Router>
