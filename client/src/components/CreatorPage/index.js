@@ -31,7 +31,7 @@ class CreatorPage extends React.Component {
             </Card>
           </Col>
           <Col l={2} m={4} s={6}>
-            <Card key="3" header={<CardTitle image="https://media.licdn.com/dms/image/C4E03AQHuVrz4Rq7nPA/profile-displayphoto-shrink_800_800/0?e=1561593600&v=beta&t=RaoIXFPy2KsqmXgI9r3S8ryExn8GqMdCovK4xsZ70mw" />}
+            <Card key="3" header={<CardTitle image="https://media.licdn.com/dms/image/C4E03AQG9flelrFCa3A/profile-displayphoto-shrink_800_800/0?e=1561593600&v=beta&t=6mPw6WVRW3bZojU8AmADMZzOR9U1E3ogOQ7IXPHifjI" />}
               title="Jason Horowitz">
               <a href="https://www.linkedin.com/in/jason-horowitz-0a362b5a/">LinkedIn</a>
             </Card>
