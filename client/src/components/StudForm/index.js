@@ -11,11 +11,9 @@ class StudForm extends Component {
         username: '',
         password: '',
         confirmPassword: '',
-
     }
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-    
+    this.handleChange = this.handleChange.bind(this) 
 }
 
 handleChange(event) {
@@ -42,19 +40,14 @@ handleSubmit(event) {
         certificationNumber: null
     })
   })
-//   .then((response) => response.json())
   .then((res) => {console.log(res) });
-  this.props.history.push('/login')
-    
-
-    
+  this.props.history.push('/login')    
 }
 
 
     
 render() {
     return(
-    
         <div className="row">
             <form className="col s12 center-align main">
                 <div className="row">
@@ -76,7 +69,6 @@ render() {
                 <div className="row">
                     <div className="input-field col s12">
                         <input 
-                    
                         name="password"
                         type="password"
                         id="password"
@@ -109,8 +101,7 @@ render() {
                     </div>
                 </div>
             </form> 
-        </div>
-    
+        </div>   
     )
 }
 

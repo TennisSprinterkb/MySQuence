@@ -3,10 +3,6 @@ import {withRouter} from 'react-router-dom'
 import './style.css'
 
 
-
-
-
-
 class LandingPage extends React.Component {
 
     constructor(props) {
