@@ -10,6 +10,7 @@
     "dotenv": "^7.0.0",
     "express": "^4.16.4",
     "express-session": "^1.16.1",
+    "materialize": "^1.0.0",
     "materialize-css": "^1.0.0-rc.2",
     "md5": "^2.2.1",
     "morgan": "^1.9.1",
@@ -22,6 +23,7 @@
     "react-materialize": "^3.1.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^2.1.8",
+    "react-sidenav": "^3.1.9",
     "sequelize": "^5.3.5"
   },
   "scripts": {
