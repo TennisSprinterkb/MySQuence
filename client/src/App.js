@@ -101,7 +101,7 @@ class App extends Component {
                 <VideoPage />}
             />
           <Route
-              exact path="/instvideopage"
+              exact path="/instvideo"
               render={() =>
                 <InstVideoPage />}
             />

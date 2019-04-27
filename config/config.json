@@ -1,13 +1,13 @@
     
 {
   "development": {
-    "username": "fkmyda0iy6h9c21h",
-    "password": "mmyhwl98xlqepgxp",
-    "database": "yj4uhi7wuhlb4n61",
-    "host": "ctgplw90pifdso61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "MySQLP@ssw0rd",
+    "database": "mysquence",
+    "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
-   },
+  },
     "test": {
       "username": "root",
       "password": null,
