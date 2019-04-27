@@ -56,7 +56,16 @@ router.route("/signup")
       console.log("this is the response obj" + dbUserSequences.sequenceName)
       res.json({dbUserSequences});
     });
+  })
+  .delete(function(req, res){
+    db.Sequence.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbGone){
+        console.log(dbGone);
+        res.json({dbGone})
+    });
   });
-
 
 module.exports = router
