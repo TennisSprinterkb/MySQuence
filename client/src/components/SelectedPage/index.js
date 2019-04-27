@@ -43,7 +43,7 @@ class SelectedPage extends Component {
         poseIds: stringIds,
         UserId: this.state.UserId
       })
-    })
+    }).then(window.location.href="/saved")
 
   }
 
