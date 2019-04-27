@@ -13,7 +13,7 @@ import SavedPage from "../src/components/SavedPage";
 import BreathePage from "../src/components/BreathePage";
 import VideoPage from "../src/components/VideoPage";
 import InstVideoPage from "../src/components/InstVideo"
-i
+
 
 
 class App extends Component {
@@ -37,7 +37,7 @@ class App extends Component {
       <div>
         <Router>
           <Switch>
-            <Route
+          <Route
               exact path="/"
               render={() =>
                 <LandingPage />}
@@ -93,7 +93,7 @@ class App extends Component {
               render={() =>
                 <StudPage />}
             />
-            <Route
+             <Route
               exact path="/videopage"
               render={() =>
                 <VideoPage />}
