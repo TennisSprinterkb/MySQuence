@@ -11,7 +11,7 @@ import AsanaPage from "../src/components/AsanaPage";
 import SelectedPage from "../src/components/SelectedPage";
 import SavedPage from "../src/components/SavedPage";
 import BreathePage from "../src/components/BreathePage";
-
+import CreatorPage from "../src/components/CreatorPage";
 
 class App extends Component {
   constructor() {
@@ -21,11 +21,11 @@ class App extends Component {
       username: null
     }
 
- 
+
     this.updateUser = this.updateUser.bind(this)
   }
 
- 
+
 
   updateUser(User) {
     this.setState(User)
@@ -37,7 +37,7 @@ class App extends Component {
       <div>
         <Router>
           <Switch>
-          <Route
+            <Route
               exact path="/"
               render={() =>
                 <LandingPage />}
@@ -92,6 +92,12 @@ class App extends Component {
               exact path="/studpage"
               render={() =>
                 <StudPage />}
+            />
+
+            <Route
+              exact path="/creator"
+              render={() =>
+                <CreatorPage />}
             />
 
           </Switch>
