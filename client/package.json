@@ -22,11 +22,8 @@
     "react-materialize": "^3.1.1",
     "react-router-dom": "^5.0.0",
     "react-scripts": "^2.1.8",
-<<<<<<< HEAD
     "react-video": "^1.5.3",
     "react-sidenav": "^3.1.9",
-=======
->>>>>>> 6d25cfbfcd2dfd89696e946128023dc911282a71
     "sequelize": "^5.3.5"
   },
   "scripts": {
