@@ -35,28 +35,13 @@ class VideoCard extends Component {
           </div>
           <div className="row">
             <div className="col s4">
-              <iframe width="280" height="160" src="https://www.youtube.com/embed/VvYCKlkLhNQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="280" height="160" src="https://www.youtube.com/embed/M-8FvC3GD8c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div >
             <div className="col s4">
-              <iframe width="280" height="160" src="https://www.youtube.com/embed/xEyyu7kk0ZI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="280" height="160" src="https://www.youtube.com/embed/iEVn59U2_LY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div className="col s4">
-              <iframe width="280" height="160" src="https://www.youtube.com/embed/OQ6NfFIr2jw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div >
-          </div>
-
-          <div className="row">
-            {/* <h2><u>John</u></h2> */}
-          </div>
-          <div className="row">
-            <div className="col s4">
-              <iframe width="280" height="160" src="https://www.youtube.com/embed/VvYCKlkLhNQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div >
-            <div className="col s4">
-              <iframe width="280" height="160" src="https://www.youtube.com/embed/xEyyu7kk0ZI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div className="col s4">
-              <iframe width="280" height="160" src="https://www.youtube.com/embed/OQ6NfFIr2jw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="280" height="160" src="https://www.youtube.com/embed/dcqW72d5JjI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div >
           </div>
 

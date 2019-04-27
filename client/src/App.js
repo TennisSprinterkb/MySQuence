@@ -11,7 +11,8 @@ import AsanaPage from "../src/components/AsanaPage";
 import SelectedPage from "../src/components/SelectedPage";
 import SavedPage from "../src/components/SavedPage";
 import BreathePage from "../src/components/BreathePage";
-import VideoPage from "../src/components/VideoPage"
+import VideoPage from "../src/components/VideoPage";
+import InstVideoPage from "../src/components/InstVideo"
 
 
 
@@ -99,7 +100,11 @@ class App extends Component {
               render={() =>
                 <VideoPage />}
             />
-
+          <Route
+              exact path="/instvideopage"
+              render={() =>
+                <InstVideoPage />}
+            />
 
           </Switch>
         </Router>

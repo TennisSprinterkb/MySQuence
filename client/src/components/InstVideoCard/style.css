@@ -1,0 +1,20 @@
+.video {
+    height: 200px;
+    width: 200px;
+}
+
+.circle {
+   width: 200px;
+   margin-left: 410px
+
+}
+
+.file-field{
+    width:500px;
+    margin-left:9px;
+    margin-bottom:50px
+}
+
+label {
+    margin-left: 20px;
+}
