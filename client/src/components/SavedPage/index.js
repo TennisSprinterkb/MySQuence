@@ -9,16 +9,74 @@ class SavedPage extends Component {
   state = {
     filteredAsana: asanaJson,
     selectArray: [],
-    userId: localStorage.getItem("UserId"),
-    savedArray: [{ sequenceName: "sequence1", poseIds: "1, 2, 3" }, { sequenceName: "sequence2", poseIds: "4, 5, 6" }],
-    sequenceName: ""
+    UserId: localStorage.getItem("UserId"),
+    savedArray: [],
+    sequenceName: "",
+    sequenceId: document.getElementById("id")
   };
 
-  // componentDidMount() {
-  //   this.filterAsana();
-  // }
+ 
 
-  checkString = () => console.log(this.state.selectArray);
+
+  componentDidMount() {
+    //first use user id to generate fetch
+    fetch("/api/sequence/" + this.state.UserId, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    }).then(response => response.json()
+      .then(response => {
+        console.log(JSON.stringify(response))
+
+        let dbResponse = response
+        dbResponse = dbResponse.dbUserSequences
+        console.log(dbResponse)
+
+
+        const newArr = dbResponse.map(data => {
+
+          const temp = data.poseIds;
+          const replacement = JSON.parse(temp);
+          return {
+            ...data,
+            poseIds: replacement
+          }
+        })
+        console.log(newArr)
+        this.setState({ savedArray: newArr })
+      }))
+  }
+
+
+  deleteSequence = () => {
+    
+   this.setState({sequenceId: document.getElementById("id")})
+   console.log(this.state.sequenceId)
+  
+    fetch("/api/sequence/" + this.state.sequenceId, {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+        // }).then(response => response.json()
+      
+
+        }).then(response => {
+          console.log(JSON.stringify(response))
+          console.log("delete button clicked")
+    })
+  }
+
+
+
+
+
+
+
+
 
   handleChange = (event) => {
     console.log(event.target.value)
@@ -27,24 +85,8 @@ class SavedPage extends Component {
     })
   }
 
-  // pushSequence = (event) => {
-  //   event.preventDefault();
-  //   const ids = this.state.selectArray
-  //   const stringIds = JSON.stringify(ids);
-  //   console.log(stringIds);
 
-  //   fetch("/api/sequence", {
-  //     method: 'GET',
-  //     headers: {
-  //       'Accept': 'application/json',
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify({
-  //       sequenceName: this.state.sequenceName,
-  //       poseIds: stringIds,
-  //     })
-  //   })
-  // }
+
 
   // set clicked sequence to display
   showSavedSequence = async (event) => {
@@ -96,10 +138,13 @@ class SavedPage extends Component {
   }
 
   _renderSequence(sequence) {
-    let { sequenceName, poseIds } = sequence;
+    let { sequenceName, poseIds, id } = sequence;
     return (
-      <a className="btn" href={sequenceName} id={poseIds} onClick={this.showSavedSequence}>
-        Show this sequence from your saved list named {sequenceName} which contains poseIds = {poseIds}</a>
+      <div>
+        <a className="btn" href={sequenceName} id={poseIds} onClick={this.showSavedSequence}>
+          Show {sequenceName}</a>
+        <button className="deleteBtn" data-id={id} onClick={this.deleteSequence}>Delete</button>
+      </div>
     )
   };
 
@@ -109,7 +154,7 @@ class SavedPage extends Component {
       <div>
         <Nav />
         <div className="cardDiv">
-          <p id="instruct">View your previously saved sequences</p>
+          <p id="instruct">Click show sequence buttons to see poses.</p>
           <Row>
             {this.state.savedArray.map((this._renderSequence).bind(this))}
           </Row>
