@@ -6,10 +6,9 @@ import Nav from "../Nav/index";
 import Typography from '@material-ui/core/Typography';
 import './style.css';
 
-class InstPage extends React.Component {
+class StudPage extends React.Component {
 
-    
-    
+     
     
     
     render() {
@@ -61,4 +60,4 @@ class InstPage extends React.Component {
     
     }
 }
-export default InstPage;
+export default StudPage;
