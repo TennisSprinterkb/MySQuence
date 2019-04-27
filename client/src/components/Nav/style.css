@@ -1,3 +1,11 @@
 Nav {
     background-color: #664464;
 }
+
+.image-logo{
+    padding-top: 2%;
+}
+
+.sidenav-trigger{
+    width:12px;
+}
