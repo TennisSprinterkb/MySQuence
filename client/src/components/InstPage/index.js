@@ -12,14 +12,10 @@ class InstPage extends React.Component {
         return (
             <div>
                 <Nav />
-                <h2>Welcome, Instructor!</h2>
-                <div style={{
-                    position: 'absolute',
-                    left: '50%',
-                    top: '70%',
-                    transform: 'translate(-50%, -50%)'
-                }}>
-
+                <div className="container landing">
+              
+                <div className="center-align" >
+                  <h2>Welcome, Instructor!</h2>
                     <List className="instpage">
                         <ListItem button component="a" href="/map">
                             <i className="material-icons prefix">near_me</i>
@@ -44,10 +40,17 @@ class InstPage extends React.Component {
                             <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
                                 Breathe</Typography>} />
                         </ListItem>
+                        <ListItem button component="a" href="/saved">
+                            <i className="material-icons prefix">favorite</i>
+                            <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
+                                MySequences</Typography>} />
+                        </ListItem>
 
                     </List>
+                    </div>
                 </div>
-            </div>
+           </div>
+                
 
 
         );
