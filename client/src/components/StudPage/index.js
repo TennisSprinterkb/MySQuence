@@ -8,52 +8,57 @@ import './style.css';
 
 class StudPage extends React.Component {
 
+    
+    
+    
+    
+    render() {
+        return (
+            <div>
+                <Nav />
+                <div className="container landing">
+              
+                <div className="center-align" >
+                  <h2>Welcome, Student!</h2>
+                    <List className="instpage">
+                        <ListItem button component="a" href="/map">
+                            <i className="material-icons prefix">near_me</i>
+                            <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30, fontFamily: '' }}>
+                                Find  a Studio</Typography>} />
+                        </ListItem>
 
-  render() {
-    return (
-      <div>
-        <Nav />
-        <h2>Welcome, Student!</h2>
-        <div style={{
-          position: 'absolute',
-          left: '50%',
-          top: '70%',
-          transform: 'translate(-50%, -50%)'
-        }}>
+                        <ListItem button component="a" href="https://www.google.com">
+                            <i className="material-icons prefix">videocam</i>
+                            <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
+                                Watch A Video</Typography>} />
+                        </ListItem>
 
-          <List>
-            <ListItem button component="a" href="/map">
-              <i className="material-icons prefix">near_me</i>
-              <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30, fontFamily: '' }}>
-                Find  a Studio</Typography>} />
-            </ListItem>
-            <br></br>
-            <ListItem button component="a" href="https://www.google.com">
-              <i className="material-icons prefix">video_label</i>
-              <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
-                Watch a Video</Typography>} />
-            </ListItem>
-            <br></br>
-            <ListItem button component="a" href="/asana">
-              <i className="material-icons prefix">add_circle</i>
-              <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
-                Build a Sequence</Typography>} />
-            </ListItem>
-            <br></br>
-            <ListItem button component="a" href="/breathe">
-              <i className="material-icons prefix">mood</i>
-              <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
-                Breathe</Typography>} />
-            </ListItem>
-            <br></br>
-          </List>
-        </div>
-      </div>
+                        <ListItem button component="a" href="/asana">
+                            <i className="material-icons prefix">add_circle</i>
+                            <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
+                                Build a Sequence</Typography>} />
+                        </ListItem>
+
+                        <ListItem button component="a" href="/breathe">
+                            <i className="material-icons prefix">mood</i>
+                            <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
+                                Breathe</Typography>} />
+                        </ListItem>
+                        <ListItem button component="a" href="/saved">
+                            <i className="material-icons prefix">favorite</i>
+                            <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
+                                MySequences</Typography>} />
+                        </ListItem>
+
+                    </List>
+                    </div>
+                </div>
+           </div>
+                
 
 
-    );
-  }
+        );
+    
+    }
 }
-
-
-export default StudPage
+export default StudPage;

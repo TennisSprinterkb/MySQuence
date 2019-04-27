@@ -81,8 +81,12 @@ body {
 
 
 .container {
-  min-height: 900px;
+  min-height: 1050px;
   padding-top: 5%;
+}
+
+.landing {
+  padding-top: 0px;
 }
 
 .btn {
