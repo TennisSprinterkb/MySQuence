@@ -33,15 +33,20 @@ class SavedPage extends Component {
         let dbResponse = response
         dbResponse = dbResponse.dbUserSequences
         console.log(dbResponse)
-
-        // for(var i = 0; i < dbResponse.length; i ++){
-
-        //   let = removedbResponse[i].poseIds   
-
-        // }
-
         
-        this.setState({savedArray: dbResponse})
+  
+        const newArr = dbResponse.map(data => {
+  
+          const temp = data.poseIds;
+          const replacement = JSON.parse(temp);
+          return {
+            ...data,
+            poseIds: replacement
+          }
+        })
+      
+        console.log(newArr)
+        this.setState({savedArray: newArr})
 
 
       }))
@@ -50,13 +55,6 @@ class SavedPage extends Component {
 
     }
 
-        // this.filterAsana();
-
-      
-  
-
-    
-    
 
   checkString = () => console.log(this.state.selectArray);
 
@@ -123,7 +121,7 @@ class SavedPage extends Component {
       let { sequenceName, poseIds } = sequence;
       return (
         <a className="btn" href={sequenceName} id={poseIds} onClick={this.showSavedSequence}>
-          Show this sequence from your saved list named {sequenceName} which contains poseIds = {poseIds}</a>
+          Show {sequenceName}</a>
       )
     };
 
@@ -133,7 +131,7 @@ class SavedPage extends Component {
         <div>
           <Nav />
           <div className="cardDiv">
-            <p id="instruct">View your previously saved sequences</p>
+            <p id="instruct">Click on saved sequence to see the poses.</p>
             <Row>
               {this.state.savedArray.map((this._renderSequence).bind(this))}
             </Row>
