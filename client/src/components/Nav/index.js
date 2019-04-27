@@ -45,7 +45,6 @@ function Nav() {
           </ul>
         </div>
         </div>
-
       <ul className="sidenav" id="mobile-demo">
         <li><a href="/map">Find a Studio</a></li>
         <li><a href="/asana">Build a Sequence</a></li>
@@ -59,4 +58,5 @@ function Nav() {
 }
 
 export default Nav;
+
 
