@@ -9,25 +9,47 @@ class SavedPage extends Component {
   state = {
     filteredAsana: asanaJson,
     selectArray: [],
-    userId: localStorage.getItem("UserId"),
-    savedArray: [{ sequenceName: "sequence1", poseIds: "1, 2, 3" }, { sequenceName: "sequence2", poseIds: "4, 5, 6" }],
+    UserId: localStorage.getItem("UserId"),
+    savedArray: [],
     sequenceName: ""
   };
 
   componentDidMount() {
     //first use user id to generate fetch
-    fetch("/api/sequence", {
+    fetch("/api/sequence/" + this.state.UserId, {
       method: 'GET',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
-      },
+      }
       // body: JSON.stringify({
       //   sequenceName: sequenceName,
       //   poseIds: poseIds,
       // })
-    }).then((res) => {console.log(res)});
+      // .then((res) => {console.log(res)})
+    }).then(response => response.json()
+      .then (response => {console.log(JSON.stringify(response))
+
+        let dbResponse = response
+        dbResponse = dbResponse.dbUserSequences
+        console.log(dbResponse)
+
+        // for(var i = 0; i < dbResponse.length; i ++){
+
+        //   let = removedbResponse[i].poseIds   
+
+        // }
+
+        
+        this.setState({savedArray: dbResponse})
+
+
+      }))
+
+
+
     }
+
         // this.filterAsana();
 
       
