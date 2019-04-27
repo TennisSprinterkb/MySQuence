@@ -12,7 +12,11 @@ class SavedPage extends Component {
     UserId: localStorage.getItem("UserId"),
     savedArray: [],
     sequenceName: "",
+    sequenceId: document.getElementById("id")
   };
+
+ 
+
 
   componentDidMount() {
     //first use user id to generate fetch
@@ -46,12 +50,12 @@ class SavedPage extends Component {
   }
 
 
-  deleteSequence = (e) => {
+  deleteSequence = () => {
     
-    // e.preventdefault();
-    // console.log(this.state.sequenceId);
-    console.log(e.target.id)
-    fetch("/api/sequence/" + e.target.id, {
+   this.setState({sequenceId: document.getElementById("id")})
+   console.log(this.state.sequenceId)
+  
+    fetch("/api/sequence/" + this.state.sequenceId, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
@@ -139,7 +143,7 @@ class SavedPage extends Component {
       <div>
         <a className="btn" href={sequenceName} id={poseIds} onClick={this.showSavedSequence}>
           Show {sequenceName}</a>
-        <button className="deleteBtn" data-id={id} onClick={this.deleteSequence.bind(this)}>Delete</button>
+        <button className="deleteBtn" data-id={id} onClick={this.deleteSequence}>Delete</button>
       </div>
     )
   };
