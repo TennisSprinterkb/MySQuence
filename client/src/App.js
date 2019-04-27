@@ -24,14 +24,17 @@ class App extends Component {
       username: null
     }
 
-
+ 
     this.updateUser = this.updateUser.bind(this)
   }
 
+ 
 
   updateUser(User) {
     this.setState(User)
   }
+
+
   render() {
     return (
       <div>
@@ -98,12 +101,11 @@ class App extends Component {
               render={() =>
                 <VideoPage />}
             />
-            <Route
+          <Route
               exact path="/instvideo"
               render={() =>
                 <InstVideoPage />}
             />
-
           </Switch>
         </Router>
 
