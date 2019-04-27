@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
-import { Card, CardTitle, Row, Col, TextInput} from 'react-materialize';
+import { Button, Card, CardTitle, Row, Col, TextInput } from 'react-materialize';
 import asanaJson from '../../asana2.json';
 import Nav from '../Nav';
 
@@ -17,9 +17,6 @@ class SelectedPage extends Component {
     this.filterAsana();
   }
 
-  checkString = () => console.log(this.state.selectArray)
-
-
   handleChange = (event) => {
     console.log(event.target.value)
     this.setState({
@@ -27,11 +24,8 @@ class SelectedPage extends Component {
     })
   }
 
-
-
   pushSequence = (event) => {
     event.preventDefault();
-
     const ids = this.state.selectArray
     const stringIds = JSON.stringify(ids);
     console.log(stringIds);
@@ -134,16 +128,16 @@ class SelectedPage extends Component {
         <Nav />
         <div className="cardDiv">
           <p id="instruct">Move your selected poses into your desired order with arrow buttons</p>
-          <button onClick={this.checkString}>Check the string again</button>
           <TextInput
-            label = "Name Your Sequence"
+            className="seqinput"
+            label="Name Your Sequence"
             name="sequenceName"
             type="text"
             id="sequenceName"
             value={this.state.sequenceName}
             onChange={this.handleChange}>
           </TextInput>
-          <button onClick={this.pushSequence}>Push to database</button>
+          <Button onClick={this.pushSequence}>Push to database</Button>
           <Row>
             {this.state.filteredAsana.map((this._renderPose).bind(this))}
           </Row>

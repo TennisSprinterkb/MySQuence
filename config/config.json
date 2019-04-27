@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
    "development": {
     "username": "root",
     "password": "Lion!1986",
@@ -7,6 +8,16 @@
       "port": 3306,
       "dialect": "mysql"
     },
+=======
+  "development": {
+    "username": "fkmyda0iy6h9c21h",
+    "password": "mmyhwl98xlqepgxp",
+    "database": "yj4uhi7wuhlb4n61",
+    "host": "ctgplw90pifdso61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
+    "dialect": "mysql"
+   },
+>>>>>>> 0b7bb6553e1fa337b6326b6353ed672f4ea04280
     "test": {
       "username": "root",
       "password": null,
