@@ -38,6 +38,10 @@ class LandingPage extends React.Component {
             </div>
           </div>
         </div>
+        <div className="footerContainer center-align">
+          <a className="footerLink" href="/creator">Learn more about the creators</a>
+          <p>Copyright © 2019</p>
+        </div>
       </div>
     )
   }
