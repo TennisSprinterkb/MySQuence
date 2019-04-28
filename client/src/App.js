@@ -102,13 +102,7 @@ class App extends Component {
               render={() =>
                 <VideoPage />}
             />
-            <Route
-              exact path="/instvideo"
-              render={() =>
-                <InstVideoPage />}
-            />
-
-
+           
             <Route
               exact path="/creator"
               render={() =>

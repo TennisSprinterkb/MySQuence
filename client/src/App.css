@@ -81,12 +81,18 @@ body {
 
 
 .container {
-  min-height: 1050px;
+  min-height: 900px;
   padding-top: 5%;
+ 
 }
 
 .landing {
   padding-top: 0px;
+}
+
+h2 {
+  text-align: "center";
+  color: purple;
 }
 
 .btn {

@@ -14,8 +14,8 @@ class InstPage extends React.Component {
                 <Nav />
                 <div className="container landing">
               
-                <div className="center-align" >
-                  <h2>Welcome, Instructor!</h2>
+                
+                  <h2 className="landhead">Welcome, {localStorage.getItem("userName")}</h2>
                     <List className="instpage">
                         <ListItem button component="a" href="/map">
                             <i className="material-icons prefix">near_me</i>
@@ -49,7 +49,7 @@ class InstPage extends React.Component {
                     </List>
                     </div>
                 </div>
-           </div>
+          
                 
 
 

@@ -12,9 +12,6 @@ class InstVideoCard extends Component {
 
     render() {
         return (
-            <div >
-                <div className="container">
-
                     <form action="#">
                         <div className="file-field input-field">
                             <div className="btn">
@@ -27,23 +24,20 @@ class InstVideoCard extends Component {
                         <br></br>
                         <br></br>
                         <div className="row">
-                            <div className="input-field col s6">
-                                <input value="" id="first_name2" type="text" class="validate"></input>
+                            <div className="input-field col s12">
+                                <input value={this.state.first_name2} name="first_name2" id="first_name2" type="text" class="validate"></input>
                                 <label className="active" for="first_name2">Instructor Name: </label>
                             </div>
                         </div>
                         <div className="row">
-                            <div className="input-field col s6">
-                                <input value="" id="video" type="text" class="validate"></input>
+                            <div className="input-field col s12">
+                                <input value={this.state.video} name="video" id="video" type="text" class="validate"></input>
                                 <label className="active" for="video">Video Link: </label>
                             </div>
                         </div>
                         <button className="btn waves-effect waves-light" type="submit" name="action">Submit
                         </button>
                     </form>
-                </div>
-            </div>
-
         );
     }
 }
