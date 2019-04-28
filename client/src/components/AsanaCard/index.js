@@ -38,7 +38,7 @@ class AsanaCard extends Component {
     const { id, sanskrit_name, english_name, img_url, targetArea, translation, category, cues } = asana;
     return (
       <Col l={3} m={6} s={12}>
-        <Card key={id} header={<CardTitle image={img_url} />}
+        <Card key={id} header={<CardTitle image={img_url} className="responsive-img" />}
           title={english_name}
           reveal={<div><p>{cues}</p><p>Category: {category}</p><p>Great for targeting: {targetArea}</p><p>Translation: {translation}</p></div>}>
           <Button

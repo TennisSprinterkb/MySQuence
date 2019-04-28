@@ -14,7 +14,7 @@ function Nav() {
           <li><a href="/">Video Page </a></li>
           <li><a href="/asana">Build a Sequence</a></li>
           <li><a href="/breathe">Breathe</a></li>
-          <li><a href="/">Saved Seqeunces</a></li>
+          <li><a href="/saved">Saved Seqeunces</a></li>
          <li><a href="/">Logout</a></li>
         </ul>
         </div>
@@ -26,7 +26,7 @@ function Nav() {
         <li><a href="/">Video Page </a></li>
         <li><a href="/asana">Build a Sequence</a></li>
         <li><a href="/breathe">Breathe</a></li>
-        <li><a href="/">Saved Seqeunces</a></li>
+        <li><a href="/saved">Saved Seqeunces</a></li>
         <li><a href="/">Logout</a></li>
       </ul>
     </div>

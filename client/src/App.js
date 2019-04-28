@@ -13,6 +13,7 @@ import SavedPage from "../src/components/SavedPage";
 import BreathePage from "../src/components/BreathePage";
 import VideoPage from "../src/components/VideoPage";
 import InstVideoPage from "../src/components/InstVideo"
+import CreatorPage from "../src/components/CreatorPage";
 
 
 
@@ -24,11 +25,11 @@ class App extends Component {
       username: null
     }
 
- 
+
     this.updateUser = this.updateUser.bind(this)
   }
 
- 
+
 
   updateUser(User) {
     this.setState(User)
@@ -40,7 +41,7 @@ class App extends Component {
       <div>
         <Router>
           <Switch>
-          <Route
+            <Route
               exact path="/"
               render={() =>
                 <LandingPage />}
@@ -96,16 +97,24 @@ class App extends Component {
               render={() =>
                 <StudPage />}
             />
-             <Route
+            <Route
               exact path="/videopage"
               render={() =>
                 <VideoPage />}
             />
-          <Route
+            <Route
               exact path="/instvideo"
               render={() =>
                 <InstVideoPage />}
             />
+
+
+            <Route
+              exact path="/creator"
+              render={() =>
+                <CreatorPage />}
+            />
+
           </Switch>
         </Router>
 
