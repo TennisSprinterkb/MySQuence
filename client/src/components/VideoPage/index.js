@@ -22,7 +22,7 @@ class VideoPage extends Component {
         <Nav />
           <div className="container">
             <VideoCard />
-            <InstVideoCard handleOnLoad={localStorage.getItem("isTeach") === 'true' ? 'Show' : 'Hide'} /> 
+            {localStorage.getItem("isTeach") === 'true' ? <InstVideoCard /> : null}
         </div>
       </div>
     );
