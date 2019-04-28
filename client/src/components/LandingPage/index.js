@@ -3,10 +3,6 @@ import { withRouter } from 'react-router-dom'
 import './style.css'
 
 
-
-
-
-
 class LandingPage extends React.Component {
 
   constructor(props) {
@@ -23,7 +19,6 @@ class LandingPage extends React.Component {
   Signup() {
     this.props.history.push('/signup')
   }
-
 
   render() {
     return (
@@ -42,10 +37,8 @@ class LandingPage extends React.Component {
                         </button>
             </div>
           </div>
-
         </div>
       </div>
-
     )
   }
 }

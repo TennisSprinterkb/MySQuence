@@ -5,17 +5,6 @@ router.get('/', function (req, res) {
   res.send("root")
 })
 
-router.route("/sequence")
-  // .get(function(req, res) {
-  //   db.Sequence.findAll({}).then(function(dbSequence) {
-  //     res.json(dbSequence);
-  //   });
-  // })
-  .post(function(req, res) {
-    db.Sequence.create(req.body).then(function(dbSequence) {
-      res.json(dbSequence);
-    });
-  })
 router.route("/signup")
   .post(function(req, res) {
     console.log(req.body);
@@ -23,42 +12,59 @@ router.route("/signup")
       res.json(dbUser);
     });
   });
-  // router.route("/signup")
-  // .post(function(req, res) {
-  //   console.log(req.body);
-  //   db.userObject.create(req.body).then(function(userObject) {
-  //     res.json(userObject);
-  //   });
-  // });
+
   router.route("/login")
   .post(function(req, res, next){ 
    db.User.findOne({
     where: {
       userName: req.body.username,
-      passwordHash: req.body.password,
-      
-    }
-    
+      passwordHash: req.body.password, 
+    }  
    }).then(function(dbUser) {
     console.log("this is the response obj" + dbUser.userName)
     res.json({dbUser});
-    next()
+    // next();
   });
 });
 
-
-  router.route("/login")
-    .get(function(req, res){ 
-     db.User.findOne({
+  router.route("/user/:id")
+  .get(function(req, res){
+    db.User.findOne({
       where: {
-        userName: req.body.username,
-        passwordHash: req.body.password
-        
+        id: req.params.id
       }
     }).then(function(dbUser) {
-      console.log("this is the response obj" + dbUser.userName)
-      res.json(dbUser.userName);
-      console.log(res);
+      res.json(dbUser);
+    });
+  });
+
+
+  router.route("/sequence")
+  .post(function(req, res) {
+    db.Sequence.create(req.body).then(function(dbSequence) {
+      res.json(dbSequence);
+    });
+  });
+
+  router.route("/sequence/:id")
+  .get(function(req, res){
+    db.Sequence.findAll({
+      where: {
+      UserId: req.params.id
+      }
+    }).then(function(dbUserSequences) {
+      console.log("this is the response obj" + dbUserSequences.sequenceName)
+      res.json({dbUserSequences});
+    });
+  })
+  .delete(function(req, res){
+    db.Sequence.destroy({
+      where: {
+        id: req.params.id
+      }
+    }).then(function(dbGone){
+        console.log(dbGone);
+        res.json({dbGone})
     });
   });
 

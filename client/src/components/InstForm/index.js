@@ -9,14 +9,11 @@ class InstForm extends Component {
     
     this.state = {
         username: '',
-
         password: '',
         confirmPassword: ''
     }
     this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleChange = this.handleChange.bind(this)
-    
-    
+    this.handleChange = this.handleChange.bind(this)  
 }
 
 
@@ -45,12 +42,8 @@ handleSubmit(event) {
         certificationNumber: this.state.certificate
     })
   })
-//   .then((response) => response.json())
   .then((res) => {console.log(res) });
   this.props.history.push('/login')
-  
-    
-
     
 }
 
