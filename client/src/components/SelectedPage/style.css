@@ -9,5 +9,8 @@ Card{
 
 .seqinput {
     max-width: 100%;
+}
 
+.pushbutton {
+    margin: 0;
 }
