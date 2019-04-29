@@ -137,7 +137,7 @@ class SelectedPage extends Component {
             value={this.state.sequenceName}
             onChange={this.handleChange}>
           </TextInput>
-          <Button onClick={this.pushSequence}>Push to database</Button>
+          <Button className="pushbutton" onClick={this.pushSequence}>Push to database</Button>
           <Row>
             {this.state.filteredAsana.map((this._renderPose).bind(this))}
           </Row>

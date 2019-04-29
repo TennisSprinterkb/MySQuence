@@ -47,23 +47,23 @@ class SavedPage extends Component {
   }
 
 
-  deleteSequence = () => {
-    
-   this.setState({sequenceId: document.getElementById("id")})
-   console.log(this.state.sequenceId)
-  
-    fetch("/api/sequence/" + this.state.sequenceId, {
+  deleteSequence = (event) => {
+    event.preventDefault();
+    this.setState({ sequenceId: document.getElementById("id") })
+    console.log("triggered the delete button " + event.target.dataId);
+
+    fetch("/api/sequence/", {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
-        // }).then(response => response.json()
-      
+      // }).then(response => response.json()
 
-        }).then(response => {
-          console.log(JSON.stringify(response))
-          console.log("delete button clicked")
+
+    }).then(response => {
+      console.log(JSON.stringify(response))
+      console.log("delete button clicked")
     })
   }
 
@@ -129,7 +129,7 @@ class SavedPage extends Component {
       <div>
         <a className="btn" href={sequenceName} id={poseIds} onClick={this.showSavedSequence}>
           Show {sequenceName}</a>
-        <button className="deleteBtn" data-id={id} onClick={this.deleteSequence}>Delete</button>
+        <button className="deleteBtn" dataId={id} onClick={this.deleteSequence}>Delete</button>
       </div>
     )
   };
