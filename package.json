@@ -24,6 +24,7 @@
     "mysql": "^2.16.0",
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
+    "react-responsive-modal": "^3.6.0",
     "sequelize": "^5.3.5"
   },
   "devDependencies": {

@@ -39,3 +39,8 @@ h2.instHead, h3.instHead {
     width:100%;
     position:absolute;
  } 
+
+ .vidmodal{
+    height: 500px;
+    width: 700px;
+ }

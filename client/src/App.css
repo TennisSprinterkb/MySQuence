@@ -15,14 +15,14 @@
 
 .input-field input:valid {
   border: 1px solid #5f3a8b;
-  background-color: rgba(220, 220, 220, 0.5);
+  background-color: rgba(255, 250, 252, 0.5);
   opacity: 50%;
   
 }
 
 .input-field input:hover {
   border: 1px solid #5f3a8b;
-  background-color: lavenderblush;
+  background-color: rgb(255, 250, 252);
  
 }
 
@@ -97,4 +97,14 @@ h2 {
 
 .btn {
   margin: 1%;
+}
+
+/* label focus color */
+.input-field input:focus + label {
+  color: purple !important;
+}
+/* label underline focus color */
+.row .input-field input:focus {
+  border-bottom: 1px solid purple !important;
+  box-shadow: 0 1px 0 0 purple !important
 }

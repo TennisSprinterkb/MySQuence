@@ -12,7 +12,6 @@ import SelectedPage from "../src/components/SelectedPage";
 import SavedPage from "../src/components/SavedPage";
 import BreathePage from "../src/components/BreathePage";
 import VideoPage from "../src/components/VideoPage";
-import InstVideoPage from "../src/components/InstVideo"
 import CreatorPage from "../src/components/CreatorPage";
 
 

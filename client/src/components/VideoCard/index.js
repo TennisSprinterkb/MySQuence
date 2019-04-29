@@ -13,12 +13,12 @@ class VideoCard extends Component {
   render() {
     return (
       <div >
-       
           <div className="row">
           <h2 className="instHead">{localStorage.getItem("isTeach") === "true" ? "Your Videos" : "Watch a Video"}</h2>
             <h3 className="instHead">Adrienne</h3>
             <div className="col s12 center-align">
-              <img src="https://yt3.ggpht.com/a-/AAuE7mB7pGFORxqPuYHgMlgeqzzFMYQFlhPvd30Xjw=s900-mo-c-c0xffffffff-rj-k-no" alt="test" className="circle responsive-img"></img>
+            {localStorage.getItem("photo") === "" ? 
+              <img src= "https://yt3.ggpht.com/a-/AAuE7mB7pGFORxqPuYHgMlgeqzzFMYQFlhPvd30Xjw=s900-mo-c-c0xffffffff-rj-k-no"  alt="test" className="circle responsive-img"></img> : <img src={localStorage.getItem("photo")} alt="test" className="circle responsive-img"></img>}
             </div>
           </div>
           <div className="row">

@@ -7,14 +7,6 @@ import InstVideoCard from '../InstVideoCard';
 
 class VideoPage extends Component {
 
- 
- 
-  handleOnLoad () {
-    
-    localStorage.getItem("isTeach")
-    
-  }
-
   render() {
     return (
       
