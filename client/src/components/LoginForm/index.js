@@ -24,7 +24,8 @@ class LoginForm extends Component {
 
     handleSubmit(event) {
         event.preventDefault()
-        console.log(this.state.username)
+        localStorage.setItem("Photo", "");
+        console.log(this.state.username);
 
         fetch("/api/login", {
             method: 'POST',

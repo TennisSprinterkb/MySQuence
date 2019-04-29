@@ -10,7 +10,7 @@ class VideoCard extends Component {
       <div >
           <div className="row">
           <h2 className="instHead">{localStorage.getItem("isTeacher") === "true" ? "Your Videos" : "Watch a Video"}</h2>
-            <h3 className="instHead">Adrienne</h3>
+            <h3 className="instHead">Adriene</h3>
             <div className="col s12 center-align">
             {localStorage.getItem("photo") === "" ? 
               <img src= "https://yt3.ggpht.com/a-/AAuE7mB7pGFORxqPuYHgMlgeqzzFMYQFlhPvd30Xjw=s900-mo-c-c0xffffffff-rj-k-no"  alt="test" className="circle responsive-img"></img> : <img src={localStorage.getItem("photo")} alt="test" className="circle responsive-img"></img>}
