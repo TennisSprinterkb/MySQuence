@@ -15,9 +15,6 @@ class SavedPage extends Component {
     sequenceId: document.getElementById("id")
   };
 
- 
-
-
   componentDidMount() {
     //first use user id to generate fetch
     fetch("/api/sequence/" + this.state.UserId, {
@@ -70,23 +67,12 @@ class SavedPage extends Component {
     })
   }
 
-
-
-
-
-
-
-
-
   handleChange = (event) => {
     console.log(event.target.value)
     this.setState({
       sequenceName: event.target.value
     })
   }
-
-
-
 
   // set clicked sequence to display
   showSavedSequence = async (event) => {

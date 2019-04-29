@@ -26,7 +26,7 @@ class StudPage extends React.Component {
                                 Find  a Studio</Typography>} />
                         </ListItem>
 
-                        <ListItem button component="a" href="https://www.google.com">
+                        <ListItem button component="a" href="/videopage">
                             <i className="material-icons prefix">videocam</i>
                             <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
                                 Watch A Video</Typography>} />
