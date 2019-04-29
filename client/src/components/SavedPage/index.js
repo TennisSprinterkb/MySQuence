@@ -16,7 +16,11 @@ class SavedPage extends Component {
   };
 
   componentDidMount() {
-    //first use user id to generate fetch
+    this.fetchSequence();
+  }
+
+  //first use user id to generate fetch
+  fetchSequence = () => {
     fetch("/api/sequence/" + this.state.UserId, {
       method: 'GET',
       headers: {
@@ -30,7 +34,6 @@ class SavedPage extends Component {
         let dbResponse = response
         dbResponse = dbResponse.dbUserSequences
         console.log(dbResponse)
-
 
         const newArr = dbResponse.map(data => {
 
@@ -46,25 +49,22 @@ class SavedPage extends Component {
       }))
   }
 
-
   deleteSequence = (event) => {
     event.preventDefault();
-    this.setState({ sequenceId: document.getElementById("id") })
+    // this.setState({ sequenceId: document.getElementById("id") })
     console.log("triggered the delete button " + event.target.dataId);
 
-    fetch("/api/sequence/", {
-      method: 'DELETE',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      }
-      // }).then(response => response.json()
-
-
-    }).then(response => {
-      console.log(JSON.stringify(response))
-      console.log("delete button clicked")
-    })
+    // fetch("/api/sequence/", {
+    //   method: 'DELETE',
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json'
+    //   }
+    //   // }).then(response => response.json()
+    // }).then(response => {
+    //   console.log(JSON.stringify(response))
+    //   console.log("delete button clicked")
+    // })
   }
 
   handleChange = (event) => {
