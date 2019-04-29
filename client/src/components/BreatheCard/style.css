@@ -10,17 +10,8 @@
 img{
     max-width: 100%;
 }
-
-.modal1{
-    height: 100vh;
-    width: 100vw;
-    position: relative;
-    /* justify-content: center; */
-    align-items: center;
-    display: flex;
-    flex-direction: column
     
-}
+
 
 .renderedImage{
     width:500px;

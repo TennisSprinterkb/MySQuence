@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import InstPage from '../src/components/InstPage';
-import StudPage from '../src/components/StudPage';
 import LandingPage from "../src/components/LandingPage";
 import Mapbox from "../src/components/Mapbox";
 import LoginForm from "../src/components/LoginForm";
@@ -90,11 +89,6 @@ class App extends Component {
               exact path="/instpage"
               render={() =>
                 <InstPage />}
-            />
-            <Route
-              exact path="/studpage"
-              render={() =>
-                <StudPage />}
             />
             <Route
               exact path="/videopage"

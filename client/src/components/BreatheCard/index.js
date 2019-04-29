@@ -42,7 +42,7 @@ class BreatheCard extends Component {
                 <br></br>
                 {
                     this.state.modalOpen && 
-                    <div className="modal1">
+                    <div className="modal1 center-align">
                     <div>
                     <img src={this.state.breathe.image} alt="" class="renderedImage"/>
                         </div>

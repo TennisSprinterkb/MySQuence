@@ -61,7 +61,7 @@ class LoginForm extends Component {
                     })
             } else {
                 this.setState({
-                    redirectTo: '/studpage'
+                    redirectTo: '/instpage'
                 })
             }
             }).catch(error => {
