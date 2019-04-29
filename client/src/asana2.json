@@ -211,7 +211,7 @@
   {
     "id": 20,
     "sanskrit_name": "Malasana",
-    "english_name": "Garland pose / Squat",
+    "english_name": "Garland pose",
     "img_url": "https://drive.google.com/thumbnail?id=1ckqDzJtcczNLpxkx5hiMTS1Ldh4JBwAM",
     "translation": "mala = garland, asana = posture",
     "category": "Hip",
@@ -299,7 +299,7 @@
   {
     "id": 28,
     "sanskrit_name": "Balasana",
-		"english_name": "Child's Pose",
+		"english_name": "Child's pose",
 		"img_url": "https://drive.google.com/thumbnail?id=17kB2lmudDOFtRQfgkf2RzZU9_RM3fkqJ",
 		"translation": "bala = child, asana = posture",
 		"category": "Seated",
