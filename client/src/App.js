@@ -12,7 +12,6 @@ import SelectedPage from "../src/components/SelectedPage";
 import SavedPage from "../src/components/SavedPage";
 import BreathePage from "../src/components/BreathePage";
 import VideoPage from "../src/components/VideoPage";
-import InstVideoPage from "../src/components/InstVideo"
 import CreatorPage from "../src/components/CreatorPage";
 
 
@@ -102,13 +101,7 @@ class App extends Component {
               render={() =>
                 <VideoPage />}
             />
-            <Route
-              exact path="/instvideo"
-              render={() =>
-                <InstVideoPage />}
-            />
-
-
+           
             <Route
               exact path="/creator"
               render={() =>

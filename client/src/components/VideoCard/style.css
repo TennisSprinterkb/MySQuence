@@ -1,13 +1,5 @@
-.video {
-    height: 200px;
-    width: 200px;
-}
 
-.circle {
-   width: 200px;
-   margin-left: 410px
 
-}
 /* 
 Adrienne
 https://www.youtube.com/watch?v=VvYCKlkLhNQ
@@ -23,3 +15,32 @@ https://www.youtube.com/watch?v=-yZR0fdUqHM */
 /* https://www.youtube.com/watch?v=2AODIZKkhzw&t=8s
 https://www.youtube.com/watch?v=N2Y3sKujuBs
 https://www.youtube.com/watch?v=Nt3IquURTH0 */
+
+h2.instHead, h3.instHead {
+    text-align: center;
+    color: purple;
+}
+
+
+.circle {
+    width: 25%;
+}
+
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:50;
+ }
+ .video-responsive embed{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+ } 
+
+ .vidmodal{
+    height: 500px;
+    width: 700px;
+ }
