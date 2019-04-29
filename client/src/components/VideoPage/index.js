@@ -14,7 +14,7 @@ class VideoPage extends Component {
         <Nav />
           <div className="container">
             <VideoCard />
-            {localStorage.getItem("isTeach") === 'true' ? <InstVideoCard /> : null}
+            {localStorage.getItem("isTeacher") === 'true' ? <InstVideoCard /> : null}
         </div>
       </div>
     );
