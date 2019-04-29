@@ -26,6 +26,7 @@ handleChange(event) {
 
 handleSubmit(event) {
     event.preventDefault()
+    localStorage.setItem("photo", "")
 
     
   fetch("/api/signup", {
