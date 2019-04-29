@@ -14,6 +14,7 @@ class LandingPage extends React.Component {
 
   Login() {
     this.props.history.push('/login')
+    
   }
 
   Signup() {
@@ -38,10 +39,11 @@ class LandingPage extends React.Component {
             </div>
           </div>
         </div>
-        <div className="footerContainer center-align">
+        
+         <div className="footerContainer center-align">
           <a className="footerLink" href="/creator">Learn more about the creators</a>
           <p>Copyright © 2019</p>
-        </div>
+        </div> 
       </div>
     )
   }

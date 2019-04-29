@@ -14,8 +14,8 @@ class InstPage extends React.Component {
                 <Nav />
                 <div className="container landing">
               
-                <div className="center-align" >
-                  <h2>Welcome, Instructor!</h2>
+                
+                  <h2 className="landhead">Welcome, {localStorage.getItem("userName")}</h2>
                     <List className="instpage">
                         <ListItem button component="a" href="/map">
                             <i className="material-icons prefix">near_me</i>
@@ -23,7 +23,7 @@ class InstPage extends React.Component {
                                 Find  a Studio</Typography>} />
                         </ListItem>
 
-                        <ListItem button component="a" href="/instvideo">
+                        <ListItem button component="a" href="/videopage">
                             <i className="material-icons prefix">videocam</i>
                             <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
                                 Create A Video</Typography>} />
@@ -49,7 +49,7 @@ class InstPage extends React.Component {
                     </List>
                     </div>
                 </div>
-           </div>
+          
                 
 
 
