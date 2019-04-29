@@ -50,21 +50,20 @@ class SavedPage extends Component {
 
   deleteSequence = (event) => {
     event.preventDefault();
-    // this.setState({ sequenceId: document.getElementById("id") })
     console.log("triggered the delete button " + event.target.id);
 
     let sequenceId = event.target.id;
 
-    // fetch("/api/sequence/ + sequenceId", {
-    //   method: 'DELETE',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json'
-    //   }
-    //   // }).then(response => response.json()
-    // }).then(response => {
-    //   console.log(JSON.stringify(response))
-    // })
+    fetch("/api/sequence/" + sequenceId, {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+      // }).then(response => response.json()
+    }).then(response => {
+      console.log(JSON.stringify(response))
+    })
   }
 
   handleChange = (event) => {

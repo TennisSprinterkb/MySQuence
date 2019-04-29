@@ -6,6 +6,10 @@
     min-height: 100%;
 }
 
+.card .card-title{
+    font-size : 20px;
+}
+
 a{
     width: 100%;
     margin-bottom: 30px;
@@ -18,8 +22,13 @@ h5{
     background-color: red;
 }
 
-img{
-    max-width: 90%;
+span{
+    font-size: 13px;
+}
+
+.asanaImg{
+    height: 220px;
+    width: 220px;
 }
 
 p{

@@ -24,7 +24,7 @@
   {
     "id": 3,
     "sanskrit_name": "Ustrasana",
-    "english_name": "Camel pose",
+    "english_name": "Camel",
     "img_url": "https://drive.google.com/thumbnail?id=1yvaUGmyQYqjvXYCbskpjYI3H3CYIYj7A",
     "translation": "ustra = camel, asana = posture",
     "category": "Backbend",
@@ -123,7 +123,7 @@
   {
     "id": 12,
     "sanskrit_name": "Ananda Balasana",
-    "english_name": "Happy Baby pose",
+    "english_name": "Happy Baby",
     "img_url": "https://drive.google.com/thumbnail?id=12jEJQbJ5GNB_nK7-ApLpuf5GtOsQ0aEm",
     "translation": "ananda = happy, bala = child, asana = posture",
     "category": "Supine",
@@ -211,7 +211,7 @@
   {
     "id": 20,
     "sanskrit_name": "Malasana",
-    "english_name": "Garland pose",
+    "english_name": "Garland / Squat",
     "img_url": "https://drive.google.com/thumbnail?id=1ckqDzJtcczNLpxkx5hiMTS1Ldh4JBwAM",
     "translation": "mala = garland, asana = posture",
     "category": "Hip",
@@ -222,7 +222,7 @@
   {  
     "id": 21,
     "sanskrit_name": "Baddha Konasana",
-    "english_name": "Butterfly pose",
+    "english_name": "Butterfly",
     "img_url": "https://drive.google.com/thumbnail?id=1Rd70CW8Ph12euUyuF_LWwNQGn0hvaqK5",
     "translation": "baddha = bound, koṇa = angle, asana = posture",
     "category": "Hip",
@@ -244,7 +244,7 @@
   {
     "id": 23,
     "sanskrit_name": "Utthita Hasta Padangusthasana",
-    "english_name": "Extended Hand-to-Toe",
+    "english_name": "Extended hand-to-toe",
     "img_url": "https://drive.google.com/thumbnail?id=1enpBYv2VonbWTriGaJI1q2828F2W8yTr",
     "translation": "utthita = extended, hasta = hand, pada = foot, angustha = big toe, asana = posture",
     "category": "Balancing",
@@ -266,7 +266,7 @@
   {
     "id": 25,
     "sanskrit_name": "Navasana",
-		"english_name": "Boat pose",
+		"english_name": "Boat",
 		"img_url": "https://drive.google.com/thumbnail?id=1Q8geifz6iZpwc94kqhjNTcfpZkObp-3s",
 		"translation": "nava = boat, asana = posture",
 		"category": "Seated",
@@ -277,7 +277,7 @@
   {
     "id": 26,
     "sanskrit_name": "Marjaryasana",
-		"english_name": "Cat pose",
+		"english_name": "Cat",
 		"img_url": "https://drive.google.com/thumbnail?id=1PjQeyJqS565tkRvhHbCfIWRIooQ19l0Q",
 		"translation": "marjarya = cat, asana = posture",
 		"category": "Strength",
@@ -299,7 +299,7 @@
   {
     "id": 28,
     "sanskrit_name": "Balasana",
-		"english_name": "Child's pose",
+		"english_name": "Child's Pose",
 		"img_url": "https://drive.google.com/thumbnail?id=17kB2lmudDOFtRQfgkf2RzZU9_RM3fkqJ",
 		"translation": "bala = child, asana = posture",
 		"category": "Seated",
@@ -332,7 +332,7 @@
   {
     "id": 31,
     "sanskrit_name": "Parivrtta Janu Sirsasana",
-		"english_name": "Revolved head-to-knee pose",
+		"english_name": "Revolved head-to-knee",
 		"img_url": "https://drive.google.com/thumbnail?id=1BKQAx10wefmkv-dmt2yEOFS9GKJoD62r",
 		"translation": "parivrtta = revolved, janu = knee, sirsa = head asana = posture",
 		"category": "Seated",
@@ -420,7 +420,7 @@
   {
     "id": 39,
 		"sanskrit_name": "Padmasana",
-		"english_name": "Lotus pose",
+		"english_name": "Lotus",
 		"img_url": "https://drive.google.com/thumbnail?id=1KnlrCaqbzUVE9fE9lbzArJX1UiKXQZsd",
 		"translation": "padma = lotus, asana = posture",
 		"category": "Seated",
@@ -453,7 +453,7 @@
   {
     "id": 42,
     "sanskrit_name": "Bhujangasana",
-    "english_name": "Cobra pose",
+    "english_name": "Cobra",
     "img_url": "https://drive.google.com/thumbnail?id=1YhDmfQqHWf5_Y_Qu3WoYqZaD4ksxlvqU",
     "translation": "bhujanga = serpent/snake, asana = posture",
     "category": "Backbend",
@@ -464,7 +464,7 @@
   {
     "id": 43,
     "sanskrit_name": "Salamba Bhujangasana",
-    "english_name": "Sphinx pose",
+    "english_name": "Sphinx",
     "img_url": "https://drive.google.com/thumbnail?id=1K9aLAw5yEgl2oNICUxtHD2aqisZaRoaT",
     "translation": "sa = with, alamba = support, bhujanga = serpent/snake, asana = posture",
     "category": "Backbend",
@@ -475,7 +475,7 @@
   {
     "id": 44,
     "sanskrit_name": "Parivrtta Surya Yantrasana",
-    "english_name": "Sundial pose",
+    "english_name": "Sundial",
     "img_url": "https://drive.google.com/thumbnail?id=1QN6eV85OyYWlZmoVFeM-jWky3EWbl5Z7",
     "translation": "parivrtta = revolved, surya = sun, yantra = instrument, asana = posture",
     "category": "Peak",
@@ -486,7 +486,7 @@
   {
     "id": 45,
     "sanskrit_name": "Hanumanasana",
-    "english_name": "Full split / monkey pose",
+    "english_name": "Full split / monkey",
     "img_url": "https://drive.google.com/thumbnail?id=1aQwD4l6IMvlPUn5Xy0qzFWvlCJjZkuRa",
     "translation": "hanuman = monkey, asana = posture",
     "category": "Hip",
@@ -497,7 +497,7 @@
   {
     "id": 46,
     "sanskrit_name": "Ardha Hanumanasana",
-    "english_name": "Half split / half monkey pose",
+    "english_name": "Half split / half monkey",
     "img_url": "https://drive.google.com/thumbnail?id=1ZNCPxL97APeWwDjhqVouZmpvTppq5Z35",
     "translation": "ardha = half, hanuman = monkey, asana = posture",
     "category": "Hip",
@@ -508,7 +508,7 @@
   {
     "id": 47,
     "sanskrit_name": "Salamba Sarvangasana",
-    "english_name": "Supported Shoulder stand",
+    "english_name": "Shoulder stand",
     "img_url": "https://drive.google.com/thumbnail?id=1g-JYeREvcZdF_I3kPrrAz3S0XyI86jdV",
     "translation": "salamba = with support, sarva = all, anga = limb, asana = posture",
     "category": "Inversion",
@@ -521,7 +521,7 @@
     "sanskrit_name": "Camatkarasana",
     "english_name": "Wild thing",
     "img_url": "https://drive.google.com/thumbnail?id=1dz2RzkpOOcc8rj2XnFA6k5YzQTkiiThr",
-    "translation": "poetic translation: the ecstatic unfolding of the enraptured heart, asana = posture",
+    "translation": "poetic: the ecstatic unfolding of the enraptured heart, asana = posture",
     "category": "Strength",
     "targetArea": "Spine, shoulders",
     "cues": "From down dog, lift one leg and open the hip. Keep opening until you flip the hip points from facing the floor to facing the sky.",
@@ -530,7 +530,7 @@
   {
     "id": 49,
     "sanskrit_name": "Utthita Uttanasana",
-    "english_name": "Forward fold with Shoulder Opener",
+    "english_name": "Fold with shoulder opener",
     "img_url": "https://drive.google.com/thumbnail?id=1a5-k0bc-T89FyKnm2xmLjQ1FUy_lI4sm",
     "translation": "utthita = extended, uttana = stretch out, asana = posture",
     "category": "Standing",
@@ -541,7 +541,7 @@
   {
     "id": 50,
     "sanskrit_name": "Prasarita Padottanasana",
-    "english_name": "Wide-legged forward fold",
+    "english_name": "Wide-legged fold",
     "img_url": "https://drive.google.com/thumbnail?id=1JB3fKazL39mvdmC6b0kkfcgIpTX6s8dn",
     "translation": "prasarita = stretched out, expanded, spread, with outstretched limbs, pada = foot, ut = intense, tan = to stretch or extend",
     "category": "Standing",
@@ -563,7 +563,7 @@
   {
     "id": 52,
     "sanskrit_name": "Utthan Pristhasana",
-    "english_name": "Lizard pose",
+    "english_name": "Lizard",
     "img_url": "https://drive.google.com/thumbnail?id=1DpiDojTlGeu-TAfR6gOdJ1895cz20KR5",
     "translation": "uttana = deep stretch, pristha = back of the body, asana = posture",
     "category": "Hip",
@@ -595,10 +595,10 @@
   },
   {
     "id": 55,
-    "sanskrit_name": "Parivrtta Utthita Hasta Padangusthasana",
-    "english_name": "Revolved Extended Hand-to-Toe",
+    "sanskrit_name": "Parivrtta Hasta Padangusthasana",
+    "english_name": "Revolved Hand-to-Toe",
     "img_url": "https://drive.google.com/thumbnail?id=1hvh7oLVVaN0TPJfrLa4qUzf6fpAl3J4w",
-    "translation": "parivrtta = revolved, utthita = extended, hasta = hand, pada = foot, angustha = big toe, asana = posture",
+    "translation": "parivrtta = revolved, hasta = hand, pada = foot, angustha = big toe, asana = posture",
     "category": "Balancing",
     "targetArea": "Iliotibial (IT) band, spinal twist",
     "cues": "From Tadasana, bring one knee to your chest. Use the opposite hand to cross over the front of the body and wrap two fingers around the big toe of the bent leg. Firm the front thigh muscles of the standing leg, extend the bent leg forward, straightening the knee as much as possible. If your hamstrings are tight, use a strap around the sole of the foot, instead. Once steady, swing the leg towards you, closing the hip. The flying leg crosses the body. Once complete, switch sides.",
@@ -629,7 +629,7 @@
   {
     "id": 58,
     "sanskrit_name": "Utthita Trikonasana",
-    "english_name": "Triangle pose",
+    "english_name": "Triangle",
     "img_url": "https://drive.google.com/thumbnail?id=1Crj7Nyn3yoq2KQy4oJTBRrfq3Q4Ggvdy",
     "translation": "utthita = extended, trikona = triangle , asana = posture",
     "category": "Standing",
@@ -640,9 +640,9 @@
   {
     "id": 59,
     "sanskrit_name": "Vashistasana Utthita Hasta Padangusthasana",
-    "english_name": "Side plank with extended hand-to-toe",
+    "english_name": "Side plank hand-to-toe",
     "img_url": "https://drive.google.com/thumbnail?id=10eBzi5ZMd1AwjWoSFXWSqOD27V77kVKl",
-    "translation": "Vasistha = most excellent, asana = posture",
+    "translation": "vasistha = most excellent, utthita = extended, hasta = hand, pada = foot, angustha = big toe,asana = posture",
     "category": "Strength",
     "targetArea": "Core, outer hip, shoulder, hamstrings",
     "cues": "From side plank, bend the top leg and wrap two fingers around the big toe. Extend the bent leg, straightening the knee as much as possible, balancing on one hand. The body is at a 45 degree angle.",

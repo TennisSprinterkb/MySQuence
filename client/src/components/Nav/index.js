@@ -11,10 +11,10 @@ function Nav() {
         <a href="#" data-target="mobile-demo" className="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="/map">Find A Studio</a></li>
-          <li><a href="/videopage">Videos </a></li>
+          <li><a href="/videopage">Videos</a></li>
           <li><a href="/asana">Build a Sequence</a></li>
           <li><a href="/breathe">Breathe</a></li>
-          <li><a href="/saved">Saved Seqeunces</a></li>
+          <li><a href="/saved">MySequences</a></li>
          <li><a href="/">Logout</a></li>
         </ul>
         </div>
@@ -23,10 +23,10 @@ function Nav() {
 
       <ul className="sidenav" id="mobile-demo">
         <li><a href="/map">Find A Studio</a></li>
-        <li><a href="/videopage">Videos </a></li>
+        <li><a href="/videopage">Videos</a></li>
         <li><a href="/asana">Build a Sequence</a></li>
         <li><a href="/breathe">Breathe</a></li>
-        <li><a href="/saved">Saved Seqeunces</a></li>
+        <li><a href="/saved">MySequences</a></li>
         <li><a href="/">Logout</a></li>
       </ul>
     </div>
