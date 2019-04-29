@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 import { Row, Col } from 'react-materialize';
 import breatheJson from '../../breathe.json';
-import Nav from "../Nav"
+
 
 
 class BreatheCard extends Component {
@@ -27,15 +27,16 @@ class BreatheCard extends Component {
         const { id, image } = breathe;
         return (
             <Col l={3} m={6} s={12}>
-                <img key={id} src={image} alt={id} onClick={ ()=> this.showModal(breathe)}/>
+                <img className="breatheImages" key={id} src={image} alt={id} onClick={ ()=> this.showModal(breathe)}/>
             </Col>
         );
     }
 
     render() {
         return (
+            <div className="center-align">
             <div className="breatheDiv" onClick={ ()=> this.setState({modalOpen: false})}>
-                <Nav />
+                {/* <Nav /> */}
                 <br></br>
                 <h3 className="choose">Choose your Favorite shape!</h3>
                 <br></br>
@@ -54,8 +55,8 @@ class BreatheCard extends Component {
                     {this.state.filteredBreathe.map((this._renderBreathe).bind(this))}
                 </Row>
                 }
-                <br></br>
-                <br></br>
+                
+            </div>
             </div>
             
         );
