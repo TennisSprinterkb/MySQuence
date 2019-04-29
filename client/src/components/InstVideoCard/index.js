@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
-import videoJson from '../../video.json';
+
 
 
 class InstVideoCard extends Component {
