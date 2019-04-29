@@ -1,4 +1,4 @@
-##MYSEQUENCE
+## MYSEQUENCE
 Welcome to Mysequence, a yoga based app to help you keep your body, mind , and energy goals. In this fast paced world of work, and fast-food, people are having a hard time to make it for some essential relaxation. This app is like a swiss army knife for the general yoga practitioner. Looking for a studio, want to build your own sequence, or watch instructors from the app, this app has it all here for you in one place. Whether you are a new instructor looking to obtain more students, or if you are student aiming to practice more with a busy schedule this app has it all.
 
 ## Instructions
