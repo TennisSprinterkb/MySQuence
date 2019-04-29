@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
-import { Card, CardTitle, Row, Col } from 'react-materialize';
+import { Button, Card, CardTitle, Row, Col } from 'react-materialize';
 import asanaJson from '../../asana2.json';
 import Nav from '../Nav';
 
@@ -48,13 +48,13 @@ class SavedPage extends Component {
       }))
   }
 
-  deleteSequence = (event) => {
+  deleteSequence = async (event) => {
     event.preventDefault();
     console.log("triggered the delete button " + event.target.id);
 
     let sequenceId = event.target.id;
 
-    fetch("/api/sequence/" + sequenceId, {
+    await fetch("/api/sequence/" + sequenceId, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
@@ -64,6 +64,8 @@ class SavedPage extends Component {
     }).then(response => {
       console.log(JSON.stringify(response))
     })
+
+    this.fetchSequence();
   }
 
   handleChange = (event) => {
@@ -128,7 +130,7 @@ class SavedPage extends Component {
       <div>
         <a className="btn" href={sequenceName} id={poseIds} onClick={this.showSavedSequence}>
           Show {sequenceName}</a>
-        <button className="deleteBtn" id={id} onClick={this.deleteSequence}>Delete</button>
+        <Button className="deleteBtn" id={id} onClick={this.deleteSequence}>Delete {sequenceName}</Button>
       </div>
     )
   };
