@@ -100,7 +100,7 @@ class SelectedPage extends Component {
   _renderPose(asana) {
     const { id, sanskrit_name, english_name, img_url, targetArea, translation, category, cues } = asana;
     return (
-      <Col l={3} m={6} s={12} >
+      <Col l={3} m={3} s={12} >
         <Card key={id} header={<CardTitle image={img_url} />}
           title={english_name}
           reveal={<div><p>{cues}</p><p>Category: {category}</p><p>Great for targeting: {targetArea}</p><p>Translation: {translation}</p></div>}>
@@ -137,7 +137,7 @@ class SelectedPage extends Component {
             value={this.state.sequenceName}
             onChange={this.handleChange}>
           </TextInput>
-          <Button onClick={this.pushSequence}>Push to database</Button>
+          <Button className="pushbutton" onClick={this.pushSequence}>Save sequence</Button>
           <Row>
             {this.state.filteredAsana.map((this._renderPose).bind(this))}
           </Row>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
-import { Card, CardTitle, Row, Col } from 'react-materialize';
+import { Button, Card, CardTitle, Row, Col } from 'react-materialize';
 import asanaJson from '../../asana2.json';
 import Nav from '../Nav';
 
@@ -11,12 +11,15 @@ class SavedPage extends Component {
     selectArray: [],
     UserId: localStorage.getItem("UserId"),
     savedArray: [],
-    sequenceName: "",
-    sequenceId: document.getElementById("id")
+    sequenceName: ""
   };
 
   componentDidMount() {
-    //first use user id to generate fetch
+    this.fetchSequence();
+  }
+
+  //first use user id to generate fetch
+  fetchSequence = () => {
     fetch("/api/sequence/" + this.state.UserId, {
       method: 'GET',
       headers: {
@@ -30,7 +33,6 @@ class SavedPage extends Component {
         let dbResponse = response
         dbResponse = dbResponse.dbUserSequences
         console.log(dbResponse)
-
 
         const newArr = dbResponse.map(data => {
 
@@ -46,25 +48,24 @@ class SavedPage extends Component {
       }))
   }
 
+  deleteSequence = async (event) => {
+    event.preventDefault();
+    console.log("triggered the delete button " + event.target.id);
 
-  deleteSequence = () => {
-    
-   this.setState({sequenceId: document.getElementById("id")})
-   console.log(this.state.sequenceId)
-  
-    fetch("/api/sequence/" + this.state.sequenceId, {
+    let sequenceId = event.target.id;
+
+    await fetch("/api/sequence/" + sequenceId, {
       method: 'DELETE',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       }
-        // }).then(response => response.json()
-      
-
-        }).then(response => {
-          console.log(JSON.stringify(response))
-          console.log("delete button clicked")
+      // }).then(response => response.json()
+    }).then(response => {
+      console.log(JSON.stringify(response))
     })
+
+    this.fetchSequence();
   }
 
   handleChange = (event) => {
@@ -129,7 +130,7 @@ class SavedPage extends Component {
       <div>
         <a className="btn" href={sequenceName} id={poseIds} onClick={this.showSavedSequence}>
           Show {sequenceName}</a>
-        <button className="deleteBtn" data-id={id} onClick={this.deleteSequence}>Delete</button>
+        <Button className="deleteBtn" id={id} onClick={this.deleteSequence}>Delete {sequenceName}</Button>
       </div>
     )
   };

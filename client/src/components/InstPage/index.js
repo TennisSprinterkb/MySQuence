@@ -26,7 +26,7 @@ class InstPage extends React.Component {
                         <ListItem button component="a" href="/videopage">
                             <i className="material-icons prefix">videocam</i>
                             <ListItemText disableTypography primary={<Typography type="h3" style={{ color: 'purple', fontSize: 30 }}>
-                                Create A Video</Typography>} />
+                            {localStorage.getItem("isTeacher") === "true" ? "Upload a Video" : "Watch a Video"}</Typography>} />
                         </ListItem>
 
                         <ListItem button component="a" href="/asana">
