@@ -3,7 +3,7 @@ Welcome to Mysequence, a yoga based app to help you keep your body, mind , and e
 
 ## Instructions
 In order to use the app you will have to sign-up or login, and for instructors make sure you enter in your certificate number to make sure you have access to the instructor page.
-Once logged in, you will be able to navigate through the app to a variety of features.
+Once logged in, you will be able to navigate through the app to a variety of features.But most of all enjoy the app!
 
 ## The App
 You can access the app [here](https://mysequence.herokuapp.com/)
@@ -27,3 +27,6 @@ You can access the app [here](https://mysequence.herokuapp.com/)
 
 ## Credits
 Yoga Icons are the work of [Claire Jones](https://thenounproject.com/hivernoir/collection/yoga/?oq=yoga&cidx=2) via the Noun Project, except for savasana which is by [Elizabeth Fuqua](https://thenounproject.com/southofbelmar/).  Two other poses came from [Bob Holzer](https://thenounproject.com/benjamin_erich/collection/sun-salutation/), chaturunga dandasana and Ardha Uttanasana.
+
+## Follow Us
+[Twitter](https://twitter.com/MySequenceYoga)
