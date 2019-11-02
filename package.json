@@ -25,7 +25,7 @@
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "react-responsive-modal": "^3.6.0",
-    "sequelize": "^5.3.5"
+    "sequelize": "^5.15.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.11"
